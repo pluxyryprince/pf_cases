@@ -70,8 +70,8 @@ namespace pfr
         {
             try
             {
-                int del = пользователиDataGridView.SelectedCells[0].RowIndex;
-                пользователиDataGridView.Rows.RemoveAt(del);
+                int delete = пользователиDataGridView.SelectedCells[0].RowIndex;
+                пользователиDataGridView.Rows.RemoveAt(delete);
                 пользователиTableAdapter.Update(pfr_casesDataSet);
             }
             catch (Exception ex)
