@@ -172,7 +172,7 @@ namespace pfr
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(652, 507);
+            this.tabControl1.Size = new System.Drawing.Size(844, 507);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -182,7 +182,7 @@ namespace pfr
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(644, 478);
+            this.tabPage1.Size = new System.Drawing.Size(836, 478);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Список учетных записей";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -212,7 +212,7 @@ namespace pfr
             this.пользователиDataGridView.GridColor = System.Drawing.SystemColors.Control;
             this.пользователиDataGridView.Location = new System.Drawing.Point(6, 6);
             this.пользователиDataGridView.Name = "пользователиDataGridView";
-            this.пользователиDataGridView.Size = new System.Drawing.Size(635, 414);
+            this.пользователиDataGridView.Size = new System.Drawing.Size(827, 414);
             this.пользователиDataGridView.TabIndex = 0;
             // 
             // пользователиBindingSource
@@ -246,7 +246,7 @@ namespace pfr
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(644, 478);
+            this.tabPage2.Size = new System.Drawing.Size(836, 478);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Добавить учетную запись";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -255,7 +255,7 @@ namespace pfr
             // add_account
             // 
             this.add_account.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.add_account.Location = new System.Drawing.Point(465, 410);
+            this.add_account.Location = new System.Drawing.Point(657, 410);
             this.add_account.Name = "add_account";
             this.add_account.Size = new System.Drawing.Size(173, 62);
             this.add_account.TabIndex = 15;
@@ -281,7 +281,7 @@ namespace pfr
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователиBindingSource, "id", true));
             this.idTextBox.Location = new System.Drawing.Point(222, 6);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(329, 22);
+            this.idTextBox.Size = new System.Drawing.Size(521, 22);
             this.idTextBox.TabIndex = 1;
             // 
             // фио_специалистаTextBox
@@ -292,7 +292,7 @@ namespace pfr
             this.фио_специалистаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователиBindingSource, "фио_специалиста", true));
             this.фио_специалистаTextBox.Location = new System.Drawing.Point(222, 34);
             this.фио_специалистаTextBox.Name = "фио_специалистаTextBox";
-            this.фио_специалистаTextBox.Size = new System.Drawing.Size(329, 22);
+            this.фио_специалистаTextBox.Size = new System.Drawing.Size(521, 22);
             this.фио_специалистаTextBox.TabIndex = 3;
             // 
             // должностьTextBox
@@ -303,7 +303,7 @@ namespace pfr
             this.должностьTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователиBindingSource, "должность", true));
             this.должностьTextBox.Location = new System.Drawing.Point(222, 62);
             this.должностьTextBox.Name = "должностьTextBox";
-            this.должностьTextBox.Size = new System.Drawing.Size(329, 22);
+            this.должностьTextBox.Size = new System.Drawing.Size(521, 22);
             this.должностьTextBox.TabIndex = 5;
             // 
             // отделTextBox
@@ -314,7 +314,7 @@ namespace pfr
             this.отделTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователиBindingSource, "отдел", true));
             this.отделTextBox.Location = new System.Drawing.Point(222, 90);
             this.отделTextBox.Name = "отделTextBox";
-            this.отделTextBox.Size = new System.Drawing.Size(329, 22);
+            this.отделTextBox.Size = new System.Drawing.Size(521, 22);
             this.отделTextBox.TabIndex = 7;
             // 
             // логинTextBox
@@ -325,7 +325,7 @@ namespace pfr
             this.логинTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователиBindingSource, "логин", true));
             this.логинTextBox.Location = new System.Drawing.Point(222, 118);
             this.логинTextBox.Name = "логинTextBox";
-            this.логинTextBox.Size = new System.Drawing.Size(329, 22);
+            this.логинTextBox.Size = new System.Drawing.Size(521, 22);
             this.логинTextBox.TabIndex = 9;
             // 
             // парольTextBox
@@ -337,7 +337,7 @@ namespace pfr
             this.парольTextBox.Location = new System.Drawing.Point(222, 146);
             this.парольTextBox.Name = "парольTextBox";
             this.парольTextBox.PasswordChar = '*';
-            this.парольTextBox.Size = new System.Drawing.Size(329, 22);
+            this.парольTextBox.Size = new System.Drawing.Size(521, 22);
             this.парольTextBox.TabIndex = 11;
             // 
             // дата_созданияDateTimePicker
@@ -348,7 +348,7 @@ namespace pfr
             this.дата_созданияDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.пользователиBindingSource, "дата_создания", true));
             this.дата_созданияDateTimePicker.Location = new System.Drawing.Point(222, 174);
             this.дата_созданияDateTimePicker.Name = "дата_созданияDateTimePicker";
-            this.дата_созданияDateTimePicker.Size = new System.Drawing.Size(329, 22);
+            this.дата_созданияDateTimePicker.Size = new System.Drawing.Size(521, 22);
             this.дата_созданияDateTimePicker.TabIndex = 13;
             this.дата_созданияDateTimePicker.Value = new System.DateTime(2022, 4, 29, 0, 0, 0, 0);
             // 
@@ -429,7 +429,7 @@ namespace pfr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 531);
+            this.ClientSize = new System.Drawing.Size(868, 531);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
