@@ -17,7 +17,7 @@ namespace pfr
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new admin_authorization());
+            Application.Run(new authorization());
         }
     }
 }

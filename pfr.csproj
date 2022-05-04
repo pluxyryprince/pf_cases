@@ -116,11 +116,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin_authorization.cs">
+    <Compile Include="admin_access.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="admin_authorization.Designer.cs">
-      <DependentUpon>admin_authorization.cs</DependentUpon>
+    <Compile Include="admin_access.Designer.cs">
+      <DependentUpon>admin_access.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_panel.Designer.cs">
+      <DependentUpon>admin_panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="authorization.Designer.cs">
+      <DependentUpon>authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="connector.cs" />
+    <Compile Include="general.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="general.Designer.cs">
+      <DependentUpon>general.cs</DependentUpon>
     </Compile>
     <Compile Include="pfr_casesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -129,8 +148,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="admin_authorization.resx">
-      <DependentUpon>admin_authorization.cs</DependentUpon>
+    <EmbeddedResource Include="admin_access.resx">
+      <DependentUpon>admin_access.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_panel.resx">
+      <DependentUpon>admin_panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="authorization.resx">
+      <DependentUpon>authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="general.resx">
+      <DependentUpon>general.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

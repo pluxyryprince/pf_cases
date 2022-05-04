@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pfr", "pfr.csproj", "{6E96A12B-02CC-4DCF-AFDA-B7155426ECFA}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "..\Installer\Installer.vdproj", "{9C34F402-2714-4D8E-BBD5-A107E035C96D}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Учет пенсионных дел", "..\Учет пенсионных дел\Учет пенсионных дел.vdproj", "{416FAF5E-FAF2-4B68-B095-2283FAB263DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{6E96A12B-02CC-4DCF-AFDA-B7155426ECFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E96A12B-02CC-4DCF-AFDA-B7155426ECFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E96A12B-02CC-4DCF-AFDA-B7155426ECFA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9C34F402-2714-4D8E-BBD5-A107E035C96D}.Debug|Any CPU.ActiveCfg = Debug
-		{9C34F402-2714-4D8E-BBD5-A107E035C96D}.Release|Any CPU.ActiveCfg = Release
+		{416FAF5E-FAF2-4B68-B095-2283FAB263DF}.Debug|Any CPU.ActiveCfg = Debug
+		{416FAF5E-FAF2-4B68-B095-2283FAB263DF}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
