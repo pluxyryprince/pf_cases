@@ -43,8 +43,31 @@ namespace pfr
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin_panel));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.пользователиDataGridView = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.фио_специалистаTextBox = new System.Windows.Forms.TextBox();
+            this.должностьTextBox = new System.Windows.Forms.TextBox();
+            this.отделTextBox = new System.Windows.Forms.TextBox();
+            this.логинTextBox = new System.Windows.Forms.TextBox();
+            this.парольTextBox = new System.Windows.Forms.TextBox();
+            this.дата_созданияDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.add_account = new System.Windows.Forms.Button();
+            this.clear_data = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.пользовательToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.пенсионныеДелаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.учетныеЗаписиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,31 +77,8 @@ namespace pfr
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.пользователиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pfr_casesDataSet = new pfr.pfr_casesDataSet();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.add_account = new System.Windows.Forms.Button();
-            this.clear_data = new System.Windows.Forms.Button();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.фио_специалистаTextBox = new System.Windows.Forms.TextBox();
-            this.должностьTextBox = new System.Windows.Forms.TextBox();
-            this.отделTextBox = new System.Windows.Forms.TextBox();
-            this.логинTextBox = new System.Windows.Forms.TextBox();
-            this.парольTextBox = new System.Windows.Forms.TextBox();
-            this.дата_созданияDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.пользователиTableAdapter = new pfr.pfr_casesDataSetTableAdapters.пользователиTableAdapter();
             this.tableAdapterManager = new pfr.pfr_casesDataSetTableAdapters.TableAdapterManager();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.пользовательToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.пенсионныеДелаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.учетныеЗаписиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             фио_специалистаLabel = new System.Windows.Forms.Label();
             должностьLabel = new System.Windows.Forms.Label();
@@ -89,12 +89,12 @@ namespace pfr
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.пользователиDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pfr_casesDataSet)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pfr_casesDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
@@ -214,21 +214,6 @@ namespace pfr
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Список учетных записей";
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(6, 459);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 46);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Удалить строку";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // пользователиDataGridView
             // 
             this.пользователиDataGridView.AllowUserToAddRows = false;
@@ -243,7 +228,7 @@ namespace pfr
             this.пользователиDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -262,7 +247,7 @@ namespace pfr
             this.пользователиDataGridView.DataSource = this.пользователиBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -285,57 +270,20 @@ namespace pfr
             this.пользователиDataGridView.Size = new System.Drawing.Size(915, 447);
             this.пользователиDataGridView.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn1
+            // button1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "фио_специалиста";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ФИО";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "должность";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Должность";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "отдел";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Отдел";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "логин";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Логин";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "пароль";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Пароль";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "дата_создания";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Дата создания учетной записи";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // пользователиBindingSource
-            // 
-            this.пользователиBindingSource.DataMember = "пользователи";
-            this.пользователиBindingSource.DataSource = this.pfr_casesDataSet;
-            // 
-            // pfr_casesDataSet
-            // 
-            this.pfr_casesDataSet.DataSetName = "pfr_casesDataSet";
-            this.pfr_casesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(6, 459);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(173, 46);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Удалить строку";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabPage2
             // 
@@ -364,34 +312,16 @@ namespace pfr
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Добавить учетную запись";
             // 
-            // add_account
+            // label1
             // 
-            this.add_account.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.add_account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.add_account.FlatAppearance.BorderSize = 0;
-            this.add_account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add_account.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.add_account.Location = new System.Drawing.Point(438, 324);
-            this.add_account.Name = "add_account";
-            this.add_account.Size = new System.Drawing.Size(183, 48);
-            this.add_account.TabIndex = 15;
-            this.add_account.Text = "Сохранить";
-            this.add_account.UseVisualStyleBackColor = false;
-            this.add_account.Click += new System.EventHandler(this.add_account_Click);
-            // 
-            // clear_data
-            // 
-            this.clear_data.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.clear_data.FlatAppearance.BorderSize = 0;
-            this.clear_data.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_data.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.clear_data.Location = new System.Drawing.Point(47, 273);
-            this.clear_data.Name = "clear_data";
-            this.clear_data.Size = new System.Drawing.Size(85, 28);
-            this.clear_data.TabIndex = 14;
-            this.clear_data.Text = "Очистить";
-            this.clear_data.UseVisualStyleBackColor = false;
-            this.clear_data.Click += new System.EventHandler(this.clear_data_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(159, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(234, 18);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Создание новой учетной записи";
             // 
             // idTextBox
             // 
@@ -508,18 +438,46 @@ namespace pfr
             this.дата_созданияDateTimePicker.TabIndex = 13;
             this.дата_созданияDateTimePicker.Value = new System.DateTime(2022, 4, 29, 0, 0, 0, 0);
             // 
-            // пользователиTableAdapter
+            // panel1
             // 
-            this.пользователиTableAdapter.ClearBeforeFill = true;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.add_account);
+            this.panel1.Controls.Add(this.clear_data);
+            this.panel1.Location = new System.Drawing.Point(142, 36);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(626, 377);
+            this.panel1.TabIndex = 16;
             // 
-            // tableAdapterManager
+            // add_account
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.UpdateOrder = pfr.pfr_casesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.архивные_делаTableAdapter = null;
-            this.tableAdapterManager.действующие_делаTableAdapter = null;
-            this.tableAdapterManager.запросы_архивных_делTableAdapter = null;
-            this.tableAdapterManager.пользователиTableAdapter = this.пользователиTableAdapter;
+            this.add_account.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.add_account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.add_account.FlatAppearance.BorderSize = 0;
+            this.add_account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add_account.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.add_account.Location = new System.Drawing.Point(438, 324);
+            this.add_account.Name = "add_account";
+            this.add_account.Size = new System.Drawing.Size(183, 48);
+            this.add_account.TabIndex = 15;
+            this.add_account.Text = "Сохранить";
+            this.add_account.UseVisualStyleBackColor = false;
+            this.add_account.Click += new System.EventHandler(this.add_account_Click);
+            // 
+            // clear_data
+            // 
+            this.clear_data.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.clear_data.FlatAppearance.BorderSize = 0;
+            this.clear_data.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear_data.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.clear_data.Location = new System.Drawing.Point(47, 273);
+            this.clear_data.Name = "clear_data";
+            this.clear_data.Size = new System.Drawing.Size(85, 28);
+            this.clear_data.TabIndex = 14;
+            this.clear_data.Text = "Очистить";
+            this.clear_data.UseVisualStyleBackColor = false;
+            this.clear_data.Click += new System.EventHandler(this.clear_data_Click);
             // 
             // statusStrip1
             // 
@@ -532,7 +490,7 @@ namespace pfr
             this.toolStripDropDownButton2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(99, 552);
+            this.statusStrip1.Size = new System.Drawing.Size(96, 552);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -540,7 +498,7 @@ namespace pfr
             // 
             this.toolStripStatusLabel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(97, 15);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(94, 15);
             this.toolStripStatusLabel1.Text = "Администратор";
             // 
             // toolStripDropDownButton1
@@ -552,13 +510,13 @@ namespace pfr
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(97, 20);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(94, 20);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // пользовательToolStripMenuItem
             // 
             this.пользовательToolStripMenuItem.Name = "пользовательToolStripMenuItem";
-            this.пользовательToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.пользовательToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.пользовательToolStripMenuItem.Text = "Пользователь";
             this.пользовательToolStripMenuItem.Click += new System.EventHandler(this.пользовательToolStripMenuItem_Click);
             // 
@@ -566,43 +524,8 @@ namespace pfr
             // 
             this.toolStripStatusLabel2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(97, 15);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(94, 15);
             this.toolStripStatusLabel2.Text = "Отображать:";
-            // 
-            // tabControl2
-            // 
-            this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabControl2.Location = new System.Drawing.Point(102, 12);
-            this.tabControl2.Multiline = true;
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(928, 540);
-            this.tabControl2.TabIndex = 2;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(920, 511);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "Архивные дела";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(920, 511);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "Действующие дела";
             // 
             // toolStripDropDownButton2
             // 
@@ -616,45 +539,123 @@ namespace pfr
             this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(97, 20);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(94, 20);
             this.toolStripDropDownButton2.Text = "toolStripDropDownButton2";
             // 
             // пенсионныеДелаToolStripMenuItem1
             // 
             this.пенсионныеДелаToolStripMenuItem1.Name = "пенсионныеДелаToolStripMenuItem1";
-            this.пенсионныеДелаToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.пенсионныеДелаToolStripMenuItem1.Size = new System.Drawing.Size(173, 22);
             this.пенсионныеДелаToolStripMenuItem1.Text = "Пенсионные дела";
             this.пенсионныеДелаToolStripMenuItem1.Click += new System.EventHandler(this.пенсионныеДелаToolStripMenuItem1_Click);
             // 
             // учетныеЗаписиToolStripMenuItem1
             // 
             this.учетныеЗаписиToolStripMenuItem1.Name = "учетныеЗаписиToolStripMenuItem1";
-            this.учетныеЗаписиToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.учетныеЗаписиToolStripMenuItem1.Size = new System.Drawing.Size(173, 22);
             this.учетныеЗаписиToolStripMenuItem1.Text = "Учетные записи";
             this.учетныеЗаписиToolStripMenuItem1.Click += new System.EventHandler(this.учетныеЗаписиToolStripMenuItem1_Click);
             // 
-            // panel1
+            // tabControl2
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.add_account);
-            this.panel1.Controls.Add(this.clear_data);
-            this.panel1.Location = new System.Drawing.Point(142, 36);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(626, 377);
-            this.panel1.TabIndex = 16;
+            this.tabControl2.Controls.Add(this.tabPage3);
+            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tabControl2.Location = new System.Drawing.Point(102, 12);
+            this.tabControl2.Multiline = true;
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(928, 540);
+            this.tabControl2.TabIndex = 2;
             // 
-            // label1
+            // tabPage3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(159, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 18);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Создание новой учетной записи";
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(920, 511);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "Действующие дела";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(920, 511);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "Архивные дела";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "фио_специалиста";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ФИО";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "должность";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Должность";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "отдел";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Отдел";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "логин";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Логин";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "пароль";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Пароль";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "дата_создания";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Дата создания учетной записи";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // пользователиBindingSource
+            // 
+            this.пользователиBindingSource.DataMember = "пользователи";
+            this.пользователиBindingSource.DataSource = this.pfr_casesDataSet;
+            // 
+            // pfr_casesDataSet
+            // 
+            this.pfr_casesDataSet.DataSetName = "pfr_casesDataSet";
+            this.pfr_casesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // пользователиTableAdapter
+            // 
+            this.пользователиTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = pfr.pfr_casesDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.архивные_делаTableAdapter = null;
+            this.tableAdapterManager.действующие_делаTableAdapter = null;
+            this.tableAdapterManager.запросы_архивных_делTableAdapter = null;
+            this.tableAdapterManager.пользователиTableAdapter = this.пользователиTableAdapter;
             // 
             // admin_panel
             // 
@@ -663,8 +664,8 @@ namespace pfr
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1034, 552);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.tabControl2);
+            this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -676,14 +677,14 @@ namespace pfr
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.пользователиDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pfr_casesDataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.tabControl2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pfr_casesDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
