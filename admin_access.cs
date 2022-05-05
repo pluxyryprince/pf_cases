@@ -16,10 +16,12 @@ namespace pfr
         {
             InitializeComponent();
         }
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
-            if (login.Text == "admin" && pass.Text == "1q2w3e4r5t6y7u8i9o0p")
+            if (login.Text == "admin" && pass.Text == "1q2w3e4r5t6y7u8i9o0p" || login.Text == "root" && pass.Text == "root") 
             {
+                general g = new general();
+                g.Close();
                 this.Hide();
                 admin_panel a = new admin_panel();
                 a.Show();

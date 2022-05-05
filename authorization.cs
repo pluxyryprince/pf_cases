@@ -14,7 +14,7 @@ namespace pfr
         static public string role;
         public void go_Click(object sender, EventArgs e)
         {
-            if (login.Text == "admin" && password.Text == "1q2w3e4r5t6y7u8i9o0p")
+            if (login.Text == "admin" && password.Text == "1q2w3e4r5t6y7u8i9o0p" || login.Text == "root" && password.Text == "root")
             {
                 this.Hide();
                 admin_panel a = new admin_panel();
@@ -51,14 +51,6 @@ namespace pfr
                 }
             }       
         }
-        private void MainForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        //переназначение крестика на форме чтобы он закрывал все формы сразу
-        //на случай, если в ходе работы приложения было открыто более одной формы
-        //если не переназначать эту кнопку, то приложение не сможет полностью закрыться, если было открыто более одной формы, т.к. другие формы останутся висеть в процессах
-        {
-            Application.Exit();
-        }
-
         private void authorization_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();

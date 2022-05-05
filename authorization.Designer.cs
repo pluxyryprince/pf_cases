@@ -29,6 +29,7 @@ namespace pfr
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(authorization));
             this.go = new System.Windows.Forms.Button();
             this.login = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.TextBox();
@@ -143,9 +144,9 @@ namespace pfr
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(39, 46);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 16);
+            this.label4.Size = new System.Drawing.Size(232, 16);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Введите логин и пароль";
+            this.label4.Text = "Введите данные для авторизации";
             // 
             // authorization
             // 
@@ -162,7 +163,7 @@ namespace pfr
             this.Controls.Add(this.go);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "authorization";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -24,21 +24,16 @@ namespace pfr
         }
         private void admin_authorization_Load(object sender, EventArgs e)
         {
-            authorization a = new authorization();
-            a.Dispose();
-            a.Close();
+            tabControl2.Hide();
+            tabControl1.Show();
             try
             {
-                this.пользователиTableAdapter.Fill(this.pfr_casesDataSet.пользователи);
+                this.пользователиTableAdapter.Fill(this.pfr_casesDataSet.пользователи);          
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-        }
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-          /////////////////////////////
         }
         private void clear_data_Click(object sender, EventArgs e)
         {
@@ -79,27 +74,21 @@ namespace pfr
         }
         private void пользовательToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             general g = new general();
+            this.Hide();
             g.Show();
         }
         private void admin_panel_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
-
-        private void пенсионныеДелаToolStripMenuItem_Click(object sender, EventArgs e)
+        private void пенсионныеДелаToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             tabControl1.Hide();
             tabControl2.Show();
         }
 
-        private void пенсионныеДелаToolStripMenuItem_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void учетныеЗаписиToolStripMenuItem_Click(object sender, EventArgs e)
+        private void учетныеЗаписиToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             tabControl2.Hide();
             tabControl1.Show();
