@@ -16,6 +16,7 @@ namespace pfr
         public general()
         {
             InitializeComponent();
+
         }
         private void general_Load(object sender, EventArgs e)
         {

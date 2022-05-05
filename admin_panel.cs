@@ -38,7 +38,7 @@ namespace pfr
         }
         private void tabPage2_Click(object sender, EventArgs e)
         {
-            
+          /////////////////////////////
         }
         private void clear_data_Click(object sender, EventArgs e)
         {
@@ -57,6 +57,7 @@ namespace pfr
             {
                 пользователиBindingSource.EndEdit();
                 пользователиTableAdapter.Update(pfr_casesDataSet);
+                MessageBox.Show("Учетная запись создана");
             }
             catch (Exception ex)
             {

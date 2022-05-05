@@ -97,7 +97,7 @@ namespace pfr
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(90, 9);
+            idLabel.Location = new System.Drawing.Point(188, 12);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(19, 15);
             idLabel.TabIndex = 0;
@@ -109,7 +109,7 @@ namespace pfr
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             фио_специалистаLabel.AutoSize = true;
-            фио_специалистаLabel.Location = new System.Drawing.Point(90, 37);
+            фио_специалистаLabel.Location = new System.Drawing.Point(188, 40);
             фио_специалистаLabel.Name = "фио_специалистаLabel";
             фио_специалистаLabel.Size = new System.Drawing.Size(36, 15);
             фио_специалистаLabel.TabIndex = 2;
@@ -121,7 +121,7 @@ namespace pfr
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             должностьLabel.AutoSize = true;
-            должностьLabel.Location = new System.Drawing.Point(90, 65);
+            должностьLabel.Location = new System.Drawing.Point(188, 68);
             должностьLabel.Name = "должностьLabel";
             должностьLabel.Size = new System.Drawing.Size(73, 15);
             должностьLabel.TabIndex = 4;
@@ -133,7 +133,7 @@ namespace pfr
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             отделLabel.AutoSize = true;
-            отделLabel.Location = new System.Drawing.Point(90, 93);
+            отделLabel.Location = new System.Drawing.Point(188, 96);
             отделLabel.Name = "отделLabel";
             отделLabel.Size = new System.Drawing.Size(44, 15);
             отделLabel.TabIndex = 6;
@@ -145,7 +145,7 @@ namespace pfr
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             логинLabel.AutoSize = true;
-            логинLabel.Location = new System.Drawing.Point(90, 121);
+            логинLabel.Location = new System.Drawing.Point(188, 124);
             логинLabel.Name = "логинLabel";
             логинLabel.Size = new System.Drawing.Size(41, 15);
             логинLabel.TabIndex = 8;
@@ -157,7 +157,7 @@ namespace pfr
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             парольLabel.AutoSize = true;
-            парольLabel.Location = new System.Drawing.Point(90, 149);
+            парольLabel.Location = new System.Drawing.Point(188, 152);
             парольLabel.Name = "парольLabel";
             парольLabel.Size = new System.Drawing.Size(51, 15);
             парольLabel.TabIndex = 10;
@@ -169,7 +169,7 @@ namespace pfr
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             дата_созданияLabel.AutoSize = true;
-            дата_созданияLabel.Location = new System.Drawing.Point(90, 178);
+            дата_созданияLabel.Location = new System.Drawing.Point(188, 181);
             дата_созданияLabel.Name = "дата_созданияLabel";
             дата_созданияLabel.Size = new System.Drawing.Size(94, 15);
             дата_созданияLabel.TabIndex = 12;
@@ -220,7 +220,7 @@ namespace pfr
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.пользователиDataGridView.AutoGenerateColumns = false;
-            this.пользователиDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.пользователиDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.пользователиDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.пользователиDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.пользователиDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -245,49 +245,42 @@ namespace pfr
             this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
             this.dataGridViewTextBoxColumn1.HeaderText = "ID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 44;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "фио_специалиста";
             this.dataGridViewTextBoxColumn2.HeaderText = "ФИО";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 61;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "должность";
             this.dataGridViewTextBoxColumn3.HeaderText = "Должность";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 98;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "отдел";
             this.dataGridViewTextBoxColumn4.HeaderText = "Отдел";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 69;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "логин";
             this.dataGridViewTextBoxColumn5.HeaderText = "Логин";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 66;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "пароль";
             this.dataGridViewTextBoxColumn6.HeaderText = "Пароль";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 76;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "дата_создания";
             this.dataGridViewTextBoxColumn7.HeaderText = "Дата создания учетной записи";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 156;
             // 
             // пользователиBindingSource
             // 
@@ -339,7 +332,7 @@ namespace pfr
             // 
             // clear_data
             // 
-            this.clear_data.Location = new System.Drawing.Point(26, 225);
+            this.clear_data.Location = new System.Drawing.Point(24, 275);
             this.clear_data.Name = "clear_data";
             this.clear_data.Size = new System.Drawing.Size(85, 28);
             this.clear_data.TabIndex = 14;
@@ -353,9 +346,9 @@ namespace pfr
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователиBindingSource, "id", true));
-            this.idTextBox.Location = new System.Drawing.Point(222, 6);
+            this.idTextBox.Location = new System.Drawing.Point(320, 9);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(283, 21);
+            this.idTextBox.Size = new System.Drawing.Size(472, 21);
             this.idTextBox.TabIndex = 1;
             // 
             // фио_специалистаTextBox
@@ -364,9 +357,9 @@ namespace pfr
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.фио_специалистаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователиBindingSource, "фио_специалиста", true));
-            this.фио_специалистаTextBox.Location = new System.Drawing.Point(222, 34);
+            this.фио_специалистаTextBox.Location = new System.Drawing.Point(320, 37);
             this.фио_специалистаTextBox.Name = "фио_специалистаTextBox";
-            this.фио_специалистаTextBox.Size = new System.Drawing.Size(283, 21);
+            this.фио_специалистаTextBox.Size = new System.Drawing.Size(472, 21);
             this.фио_специалистаTextBox.TabIndex = 3;
             // 
             // должностьTextBox
@@ -375,9 +368,9 @@ namespace pfr
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.должностьTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователиBindingSource, "должность", true));
-            this.должностьTextBox.Location = new System.Drawing.Point(222, 62);
+            this.должностьTextBox.Location = new System.Drawing.Point(320, 65);
             this.должностьTextBox.Name = "должностьTextBox";
-            this.должностьTextBox.Size = new System.Drawing.Size(283, 21);
+            this.должностьTextBox.Size = new System.Drawing.Size(472, 21);
             this.должностьTextBox.TabIndex = 5;
             // 
             // отделTextBox
@@ -386,9 +379,9 @@ namespace pfr
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.отделTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователиBindingSource, "отдел", true));
-            this.отделTextBox.Location = new System.Drawing.Point(222, 90);
+            this.отделTextBox.Location = new System.Drawing.Point(320, 93);
             this.отделTextBox.Name = "отделTextBox";
-            this.отделTextBox.Size = new System.Drawing.Size(283, 21);
+            this.отделTextBox.Size = new System.Drawing.Size(472, 21);
             this.отделTextBox.TabIndex = 7;
             // 
             // логинTextBox
@@ -397,9 +390,9 @@ namespace pfr
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.логинTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователиBindingSource, "логин", true));
-            this.логинTextBox.Location = new System.Drawing.Point(222, 118);
+            this.логинTextBox.Location = new System.Drawing.Point(320, 121);
             this.логинTextBox.Name = "логинTextBox";
-            this.логинTextBox.Size = new System.Drawing.Size(283, 21);
+            this.логинTextBox.Size = new System.Drawing.Size(472, 21);
             this.логинTextBox.TabIndex = 9;
             // 
             // парольTextBox
@@ -408,10 +401,10 @@ namespace pfr
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.парольTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.пользователиBindingSource, "пароль", true));
-            this.парольTextBox.Location = new System.Drawing.Point(222, 146);
+            this.парольTextBox.Location = new System.Drawing.Point(320, 149);
             this.парольTextBox.Name = "парольTextBox";
             this.парольTextBox.PasswordChar = '*';
-            this.парольTextBox.Size = new System.Drawing.Size(283, 21);
+            this.парольTextBox.Size = new System.Drawing.Size(472, 21);
             this.парольTextBox.TabIndex = 11;
             // 
             // дата_созданияDateTimePicker
@@ -420,9 +413,9 @@ namespace pfr
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.дата_созданияDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.пользователиBindingSource, "дата_создания", true));
-            this.дата_созданияDateTimePicker.Location = new System.Drawing.Point(222, 174);
+            this.дата_созданияDateTimePicker.Location = new System.Drawing.Point(320, 177);
             this.дата_созданияDateTimePicker.Name = "дата_созданияDateTimePicker";
-            this.дата_созданияDateTimePicker.Size = new System.Drawing.Size(283, 21);
+            this.дата_созданияDateTimePicker.Size = new System.Drawing.Size(472, 21);
             this.дата_созданияDateTimePicker.TabIndex = 13;
             this.дата_созданияDateTimePicker.Value = new System.DateTime(2022, 4, 29, 0, 0, 0, 0);
             // 
@@ -496,7 +489,7 @@ namespace pfr
             // пенсионныеДелаToolStripMenuItem
             // 
             this.пенсионныеДелаToolStripMenuItem.Name = "пенсионныеДелаToolStripMenuItem";
-            this.пенсионныеДелаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.пенсионныеДелаToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.пенсионныеДелаToolStripMenuItem.Text = "Пенсионные дела";
             this.пенсионныеДелаToolStripMenuItem.Click += new System.EventHandler(this.пенсионныеДелаToolStripMenuItem_Click);
             this.пенсионныеДелаToolStripMenuItem.TextChanged += new System.EventHandler(this.пенсионныеДелаToolStripMenuItem_TextChanged);
@@ -504,7 +497,7 @@ namespace pfr
             // учетныеЗаписиToolStripMenuItem
             // 
             this.учетныеЗаписиToolStripMenuItem.Name = "учетныеЗаписиToolStripMenuItem";
-            this.учетныеЗаписиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.учетныеЗаписиToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.учетныеЗаписиToolStripMenuItem.Text = "Учетные записи";
             this.учетныеЗаписиToolStripMenuItem.Click += new System.EventHandler(this.учетныеЗаписиToolStripMenuItem_Click);
             // 
@@ -512,8 +505,8 @@ namespace pfr
             // 
             this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tabControl2.Location = new System.Drawing.Point(12, 12);
             this.tabControl2.Multiline = true;
@@ -554,6 +547,7 @@ namespace pfr
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "admin_panel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Панель администратора";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.admin_panel_FormClosing);
             this.Load += new System.EventHandler(this.admin_authorization_Load);
