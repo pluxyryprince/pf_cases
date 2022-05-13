@@ -44,6 +44,15 @@ namespace pfr
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.пользователиDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.пользователиBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pfr_casesDataSet = new pfr.pfr_casesDataSet();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,15 +77,6 @@ namespace pfr
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.пользователиBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pfr_casesDataSet = new pfr.pfr_casesDataSet();
             this.пользователиTableAdapter = new pfr.pfr_casesDataSetTableAdapters.пользователиTableAdapter();
             this.tableAdapterManager = new pfr.pfr_casesDataSetTableAdapters.TableAdapterManager();
             idLabel = new System.Windows.Forms.Label();
@@ -89,12 +89,12 @@ namespace pfr
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.пользователиDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pfr_casesDataSet)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pfr_casesDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
@@ -269,6 +269,58 @@ namespace pfr
             this.пользователиDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.пользователиDataGridView.Size = new System.Drawing.Size(915, 447);
             this.пользователиDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "фио_специалиста";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ФИО";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "должность";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Должность";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "отдел";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Отдел";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "логин";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Логин";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "пароль";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Пароль";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "дата_создания";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Дата создания учетной записи";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // пользователиBindingSource
+            // 
+            this.пользователиBindingSource.DataMember = "пользователи";
+            this.пользователиBindingSource.DataSource = this.pfr_casesDataSet;
+            // 
+            // pfr_casesDataSet
+            // 
+            this.pfr_casesDataSet.DataSetName = "pfr_casesDataSet";
+            this.pfr_casesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
@@ -490,7 +542,7 @@ namespace pfr
             this.toolStripDropDownButton2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(96, 552);
+            this.statusStrip1.Size = new System.Drawing.Size(99, 552);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -498,7 +550,7 @@ namespace pfr
             // 
             this.toolStripStatusLabel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(94, 15);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(97, 15);
             this.toolStripStatusLabel1.Text = "Администратор";
             // 
             // toolStripDropDownButton1
@@ -510,13 +562,13 @@ namespace pfr
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(94, 20);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(97, 20);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // пользовательToolStripMenuItem
             // 
             this.пользовательToolStripMenuItem.Name = "пользовательToolStripMenuItem";
-            this.пользовательToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.пользовательToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.пользовательToolStripMenuItem.Text = "Пользователь";
             this.пользовательToolStripMenuItem.Click += new System.EventHandler(this.пользовательToolStripMenuItem_Click);
             // 
@@ -524,7 +576,7 @@ namespace pfr
             // 
             this.toolStripStatusLabel2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(94, 15);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(97, 15);
             this.toolStripStatusLabel2.Text = "Отображать:";
             // 
             // toolStripDropDownButton2
@@ -539,20 +591,20 @@ namespace pfr
             this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(94, 20);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(97, 20);
             this.toolStripDropDownButton2.Text = "toolStripDropDownButton2";
             // 
             // пенсионныеДелаToolStripMenuItem1
             // 
             this.пенсионныеДелаToolStripMenuItem1.Name = "пенсионныеДелаToolStripMenuItem1";
-            this.пенсионныеДелаToolStripMenuItem1.Size = new System.Drawing.Size(173, 22);
+            this.пенсионныеДелаToolStripMenuItem1.Size = new System.Drawing.Size(179, 22);
             this.пенсионныеДелаToolStripMenuItem1.Text = "Пенсионные дела";
             this.пенсионныеДелаToolStripMenuItem1.Click += new System.EventHandler(this.пенсионныеДелаToolStripMenuItem1_Click);
             // 
             // учетныеЗаписиToolStripMenuItem1
             // 
             this.учетныеЗаписиToolStripMenuItem1.Name = "учетныеЗаписиToolStripMenuItem1";
-            this.учетныеЗаписиToolStripMenuItem1.Size = new System.Drawing.Size(173, 22);
+            this.учетныеЗаписиToolStripMenuItem1.Size = new System.Drawing.Size(179, 22);
             this.учетныеЗаписиToolStripMenuItem1.Text = "Учетные записи";
             this.учетныеЗаписиToolStripMenuItem1.Click += new System.EventHandler(this.учетныеЗаписиToolStripMenuItem1_Click);
             // 
@@ -592,58 +644,6 @@ namespace pfr
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Архивные дела";
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "фио_специалиста";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ФИО";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "должность";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Должность";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "отдел";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Отдел";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "логин";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Логин";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "пароль";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Пароль";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "дата_создания";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Дата создания учетной записи";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // пользователиBindingSource
-            // 
-            this.пользователиBindingSource.DataMember = "пользователи";
-            this.пользователиBindingSource.DataSource = this.pfr_casesDataSet;
-            // 
-            // pfr_casesDataSet
-            // 
-            this.pfr_casesDataSet.DataSetName = "pfr_casesDataSet";
-            this.pfr_casesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // пользователиTableAdapter
             // 
             this.пользователиTableAdapter.ClearBeforeFill = true;
@@ -664,8 +664,8 @@ namespace pfr
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1034, 552);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControl2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -677,14 +677,14 @@ namespace pfr
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.пользователиDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pfr_casesDataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.tabControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.пользователиBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pfr_casesDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
