@@ -38,6 +38,7 @@ namespace pfr
             this.login = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
+            this.back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -153,12 +154,29 @@ namespace pfr
             this.label4.TabIndex = 7;
             this.label4.Text = "Введите данные для доступа";
             // 
+            // back
+            // 
+            this.back.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.back.FlatAppearance.BorderSize = 0;
+            this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.back.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.back.Location = new System.Drawing.Point(12, 12);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(27, 27);
+            this.back.TabIndex = 8;
+            this.back.Text = "<";
+            this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
+            // 
             // admin_access
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(405, 386);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pass);
@@ -188,5 +206,6 @@ namespace pfr
         private System.Windows.Forms.TextBox login;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button back;
     }
 }

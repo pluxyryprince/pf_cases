@@ -24,6 +24,10 @@ namespace pfr
         }
         private void admin_authorization_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "pfr_casesDataSet.архивные_дела". При необходимости она может быть перемещена или удалена.
+            this.архивные_делаTableAdapter.Fill(this.pfr_casesDataSet.архивные_дела);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "pfr_casesDataSet.действующие_дела". При необходимости она может быть перемещена или удалена.
+            this.действующие_делаTableAdapter.Fill(this.pfr_casesDataSet.действующие_дела);
             tabControl2.Hide();
             tabControl1.Show();
             try

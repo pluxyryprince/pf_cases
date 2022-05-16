@@ -23,8 +23,6 @@ namespace pfr
                 this.Hide();
                 admin_panel a = new admin_panel();
                 a.Show();
-                general g = new general();
-                g.Hide();
             }
             else
             {
@@ -34,6 +32,12 @@ namespace pfr
         private void admin_access_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            general g = new general();
+            g.Show();
         }
     }
 }

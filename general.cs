@@ -17,8 +17,8 @@ namespace pfr
         }
         private void администраторToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //this.Close();
             admin_access access = new admin_access();
+            this.Hide();
             access.Show();
         }
         private void general_FormClosing_1(object sender, FormClosingEventArgs e)
