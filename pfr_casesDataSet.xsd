@@ -44,7 +44,7 @@
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT `номер_архивного_дела`, `номер_дела`, `фио`, `дата_рождения`, `вид_начислений`, `район_проживания`, `адрес_проживания`, `дата_архивирования`, `причина_архивирования`, `фио_архивариуса` FROM `архивные_дела`</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -298,7 +298,7 @@
   <xs:element name="pfr_casesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="pfr_casesDataSet" msprop:Generator_UserDSName="pfr_casesDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="архивные_дела" msprop:Generator_TableClassName="архивные_делаDataTable" msprop:Generator_TableVarName="tableархивные_дела" msprop:Generator_RowChangedName="архивные_делаRowChanged" msprop:Generator_TablePropName="архивные_дела" msprop:Generator_RowDeletingName="архивные_делаRowDeleting" msprop:Generator_RowChangingName="архивные_делаRowChanging" msprop:Generator_RowEvHandlerName="архивные_делаRowChangeEventHandler" msprop:Generator_RowDeletedName="архивные_делаRowDeleted" msprop:Generator_RowClassName="архивные_делаRow" msprop:Generator_UserTableName="архивные_дела" msprop:Generator_RowEvArgName="архивные_делаRowChangeEvent">
+        <xs:element name="архивные_дела" msprop:Generator_TableClassName="архивные_делаDataTable" msprop:Generator_TableVarName="tableархивные_дела" msprop:Generator_TablePropName="архивные_дела" msprop:Generator_RowDeletingName="архивные_делаRowDeleting" msprop:Generator_RowChangingName="архивные_делаRowChanging" msprop:Generator_RowEvHandlerName="архивные_делаRowChangeEventHandler" msprop:Generator_RowDeletedName="архивные_делаRowDeleted" msprop:Generator_UserTableName="архивные_дела" msprop:Generator_RowChangedName="архивные_делаRowChanged" msprop:Generator_RowEvArgName="архивные_делаRowChangeEvent" msprop:Generator_RowClassName="архивные_делаRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="номер_архивного_дела" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnномер_архивного_дела" msprop:Generator_ColumnPropNameInRow="номер_архивного_дела" msprop:Generator_ColumnPropNameInTable="номер_архивного_делаColumn" msprop:Generator_UserColumnName="номер_архивного_дела" type="xs:int" />
@@ -328,7 +328,7 @@
               <xs:element name="адрес_проживания" msprop:Generator_ColumnVarNameInTable="columnадрес_проживания" msprop:Generator_ColumnPropNameInRow="адрес_проживания" msprop:Generator_ColumnPropNameInTable="адрес_проживанияColumn" msprop:Generator_UserColumnName="адрес_проживания">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="70" />
+                    <xs:length value="1" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -350,7 +350,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="действующие_дела" msprop:Generator_TableClassName="действующие_делаDataTable" msprop:Generator_TableVarName="tableдействующие_дела" msprop:Generator_RowChangedName="действующие_делаRowChanged" msprop:Generator_TablePropName="действующие_дела" msprop:Generator_RowDeletingName="действующие_делаRowDeleting" msprop:Generator_RowChangingName="действующие_делаRowChanging" msprop:Generator_RowEvHandlerName="действующие_делаRowChangeEventHandler" msprop:Generator_RowDeletedName="действующие_делаRowDeleted" msprop:Generator_RowClassName="действующие_делаRow" msprop:Generator_UserTableName="действующие_дела" msprop:Generator_RowEvArgName="действующие_делаRowChangeEvent">
+        <xs:element name="действующие_дела" msprop:Generator_TableClassName="действующие_делаDataTable" msprop:Generator_TableVarName="tableдействующие_дела" msprop:Generator_TablePropName="действующие_дела" msprop:Generator_RowDeletingName="действующие_делаRowDeleting" msprop:Generator_RowChangingName="действующие_делаRowChanging" msprop:Generator_RowEvHandlerName="действующие_делаRowChangeEventHandler" msprop:Generator_RowDeletedName="действующие_делаRowDeleted" msprop:Generator_UserTableName="действующие_дела" msprop:Generator_RowChangedName="действующие_делаRowChanged" msprop:Generator_RowEvArgName="действующие_делаRowChangeEvent" msprop:Generator_RowClassName="действующие_делаRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="номер_дела" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnномер_дела" msprop:Generator_ColumnPropNameInRow="номер_дела" msprop:Generator_ColumnPropNameInTable="номер_делаColumn" msprop:Generator_UserColumnName="номер_дела" type="xs:int" />
@@ -394,7 +394,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="запросы_архивных_дел" msprop:Generator_TableClassName="запросы_архивных_делDataTable" msprop:Generator_TableVarName="tableзапросы_архивных_дел" msprop:Generator_RowChangedName="запросы_архивных_делRowChanged" msprop:Generator_TablePropName="запросы_архивных_дел" msprop:Generator_RowDeletingName="запросы_архивных_делRowDeleting" msprop:Generator_RowChangingName="запросы_архивных_делRowChanging" msprop:Generator_RowEvHandlerName="запросы_архивных_делRowChangeEventHandler" msprop:Generator_RowDeletedName="запросы_архивных_делRowDeleted" msprop:Generator_RowClassName="запросы_архивных_делRow" msprop:Generator_UserTableName="запросы_архивных_дел" msprop:Generator_RowEvArgName="запросы_архивных_делRowChangeEvent">
+        <xs:element name="запросы_архивных_дел" msprop:Generator_TableClassName="запросы_архивных_делDataTable" msprop:Generator_TableVarName="tableзапросы_архивных_дел" msprop:Generator_TablePropName="запросы_архивных_дел" msprop:Generator_RowDeletingName="запросы_архивных_делRowDeleting" msprop:Generator_RowChangingName="запросы_архивных_делRowChanging" msprop:Generator_RowEvHandlerName="запросы_архивных_делRowChangeEventHandler" msprop:Generator_RowDeletedName="запросы_архивных_делRowDeleted" msprop:Generator_UserTableName="запросы_архивных_дел" msprop:Generator_RowChangedName="запросы_архивных_делRowChanged" msprop:Generator_RowEvArgName="запросы_архивных_делRowChangeEvent" msprop:Generator_RowClassName="запросы_архивных_делRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -410,7 +410,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="пользователи" msprop:Generator_TableClassName="пользователиDataTable" msprop:Generator_TableVarName="tableпользователи" msprop:Generator_RowChangedName="пользователиRowChanged" msprop:Generator_TablePropName="пользователи" msprop:Generator_RowDeletingName="пользователиRowDeleting" msprop:Generator_RowChangingName="пользователиRowChanging" msprop:Generator_RowEvHandlerName="пользователиRowChangeEventHandler" msprop:Generator_RowDeletedName="пользователиRowDeleted" msprop:Generator_RowClassName="пользователиRow" msprop:Generator_UserTableName="пользователи" msprop:Generator_RowEvArgName="пользователиRowChangeEvent">
+        <xs:element name="пользователи" msprop:Generator_TableClassName="пользователиDataTable" msprop:Generator_TableVarName="tableпользователи" msprop:Generator_TablePropName="пользователи" msprop:Generator_RowDeletingName="пользователиRowDeleting" msprop:Generator_RowChangingName="пользователиRowChanging" msprop:Generator_RowEvHandlerName="пользователиRowChangeEventHandler" msprop:Generator_RowDeletedName="пользователиRowDeleted" msprop:Generator_UserTableName="пользователи" msprop:Generator_RowChangedName="пользователиRowChanged" msprop:Generator_RowEvArgName="пользователиRowChangeEvent" msprop:Generator_RowClassName="пользователиRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -472,4 +472,10 @@
       <xs:field xpath="mstns:id" />
     </xs:unique>
   </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="действующие_дела_архивные_дела" msdata:parent="действующие_дела" msdata:child="архивные_дела" msdata:parentkey="номер_дела" msdata:childkey="номер_дела" msprop:Generator_UserChildTable="архивные_дела" msprop:Generator_ChildPropName="Getархивные_делаRows" msprop:Generator_UserRelationName="действующие_дела_архивные_дела" msprop:Generator_RelationVarName="relationдействующие_дела_архивные_дела" msprop:Generator_UserParentTable="действующие_дела" msprop:Generator_ParentPropName="действующие_делаRow" />
+      <msdata:Relationship name="запросы_архивных_дел_архивные_дела" msdata:parent="запросы_архивных_дел" msdata:child="архивные_дела" msdata:parentkey="дата_передачи_в_отдел" msdata:childkey="дата_архивирования" msprop:Generator_UserChildTable="архивные_дела" msprop:Generator_ChildPropName="Getархивные_делаRows" msprop:Generator_UserRelationName="запросы_архивных_дел_архивные_дела" msprop:Generator_RelationVarName="relationзапросы_архивных_дел_архивные_дела" msprop:Generator_UserParentTable="запросы_архивных_дел" msprop:Generator_ParentPropName="запросы_архивных_делRow" />
+    </xs:appinfo>
+  </xs:annotation>
 </xs:schema>

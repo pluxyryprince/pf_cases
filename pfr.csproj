@@ -204,6 +204,9 @@
     <Compile Include="general.Designer.cs">
       <DependentUpon>general.cs</DependentUpon>
     </Compile>
+    <Compile Include="pfr_casesDataSet.cs">
+      <DependentUpon>pfr_casesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="pfr_casesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

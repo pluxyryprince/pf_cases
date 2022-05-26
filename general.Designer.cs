@@ -42,6 +42,16 @@ namespace pfr
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерделаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.фиоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датарожденияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.видначисленийDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.районпроживанияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.адреспроживанияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датаархивированияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.причинаархивированияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.фиоархивариусаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.архивныеделаBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pfr_casesDataSet = new pfr.pfr_casesDataSet();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -59,16 +69,6 @@ namespace pfr
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.действующие_делаTableAdapter = new pfr.pfr_casesDataSetTableAdapters.действующие_делаTableAdapter();
             this.архивные_делаTableAdapter = new pfr.pfr_casesDataSetTableAdapters.архивные_делаTableAdapter();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.номерделаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.фиоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датарожденияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.видначисленийDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.районпроживанияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.адреспроживанияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датаархивированияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.причинаархивированияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.фиоархивариусаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -153,6 +153,77 @@ namespace pfr
             this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView2.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.case_card_open_Archiv);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "номер_архивного_дела";
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // номерделаDataGridViewTextBoxColumn
+            // 
+            this.номерделаDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.номерделаDataGridViewTextBoxColumn.DataPropertyName = "номер_дела";
+            resources.ApplyResources(this.номерделаDataGridViewTextBoxColumn, "номерделаDataGridViewTextBoxColumn");
+            this.номерделаDataGridViewTextBoxColumn.Name = "номерделаDataGridViewTextBoxColumn";
+            // 
+            // фиоDataGridViewTextBoxColumn
+            // 
+            this.фиоDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.фиоDataGridViewTextBoxColumn.DataPropertyName = "фио";
+            resources.ApplyResources(this.фиоDataGridViewTextBoxColumn, "фиоDataGridViewTextBoxColumn");
+            this.фиоDataGridViewTextBoxColumn.Name = "фиоDataGridViewTextBoxColumn";
+            // 
+            // датарожденияDataGridViewTextBoxColumn
+            // 
+            this.датарожденияDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.датарожденияDataGridViewTextBoxColumn.DataPropertyName = "дата_рождения";
+            resources.ApplyResources(this.датарожденияDataGridViewTextBoxColumn, "датарожденияDataGridViewTextBoxColumn");
+            this.датарожденияDataGridViewTextBoxColumn.Name = "датарожденияDataGridViewTextBoxColumn";
+            // 
+            // видначисленийDataGridViewTextBoxColumn
+            // 
+            this.видначисленийDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.видначисленийDataGridViewTextBoxColumn.DataPropertyName = "вид_начислений";
+            resources.ApplyResources(this.видначисленийDataGridViewTextBoxColumn, "видначисленийDataGridViewTextBoxColumn");
+            this.видначисленийDataGridViewTextBoxColumn.Name = "видначисленийDataGridViewTextBoxColumn";
+            // 
+            // районпроживанияDataGridViewTextBoxColumn
+            // 
+            this.районпроживанияDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.районпроживанияDataGridViewTextBoxColumn.DataPropertyName = "район_проживания";
+            resources.ApplyResources(this.районпроживанияDataGridViewTextBoxColumn, "районпроживанияDataGridViewTextBoxColumn");
+            this.районпроживанияDataGridViewTextBoxColumn.Name = "районпроживанияDataGridViewTextBoxColumn";
+            // 
+            // адреспроживанияDataGridViewTextBoxColumn
+            // 
+            this.адреспроживанияDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.адреспроживанияDataGridViewTextBoxColumn.DataPropertyName = "адрес_проживания";
+            resources.ApplyResources(this.адреспроживанияDataGridViewTextBoxColumn, "адреспроживанияDataGridViewTextBoxColumn");
+            this.адреспроживанияDataGridViewTextBoxColumn.Name = "адреспроживанияDataGridViewTextBoxColumn";
+            // 
+            // датаархивированияDataGridViewTextBoxColumn
+            // 
+            this.датаархивированияDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.датаархивированияDataGridViewTextBoxColumn.DataPropertyName = "дата_архивирования";
+            resources.ApplyResources(this.датаархивированияDataGridViewTextBoxColumn, "датаархивированияDataGridViewTextBoxColumn");
+            this.датаархивированияDataGridViewTextBoxColumn.Name = "датаархивированияDataGridViewTextBoxColumn";
+            // 
+            // причинаархивированияDataGridViewTextBoxColumn
+            // 
+            this.причинаархивированияDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.причинаархивированияDataGridViewTextBoxColumn.DataPropertyName = "причина_архивирования";
+            resources.ApplyResources(this.причинаархивированияDataGridViewTextBoxColumn, "причинаархивированияDataGridViewTextBoxColumn");
+            this.причинаархивированияDataGridViewTextBoxColumn.Name = "причинаархивированияDataGridViewTextBoxColumn";
+            // 
+            // фиоархивариусаDataGridViewTextBoxColumn
+            // 
+            this.фиоархивариусаDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.фиоархивариусаDataGridViewTextBoxColumn.DataPropertyName = "фио_архивариуса";
+            resources.ApplyResources(this.фиоархивариусаDataGridViewTextBoxColumn, "фиоархивариусаDataGridViewTextBoxColumn");
+            this.фиоархивариусаDataGridViewTextBoxColumn.Name = "фиоархивариусаDataGridViewTextBoxColumn";
             // 
             // архивныеделаBindingSource
             // 
@@ -302,67 +373,6 @@ namespace pfr
             // архивные_делаTableAdapter
             // 
             this.архивные_делаTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "номер_архивного_дела";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // номерделаDataGridViewTextBoxColumn
-            // 
-            this.номерделаDataGridViewTextBoxColumn.DataPropertyName = "номер_дела";
-            resources.ApplyResources(this.номерделаDataGridViewTextBoxColumn, "номерделаDataGridViewTextBoxColumn");
-            this.номерделаDataGridViewTextBoxColumn.Name = "номерделаDataGridViewTextBoxColumn";
-            // 
-            // фиоDataGridViewTextBoxColumn
-            // 
-            this.фиоDataGridViewTextBoxColumn.DataPropertyName = "фио";
-            resources.ApplyResources(this.фиоDataGridViewTextBoxColumn, "фиоDataGridViewTextBoxColumn");
-            this.фиоDataGridViewTextBoxColumn.Name = "фиоDataGridViewTextBoxColumn";
-            // 
-            // датарожденияDataGridViewTextBoxColumn
-            // 
-            this.датарожденияDataGridViewTextBoxColumn.DataPropertyName = "дата_рождения";
-            resources.ApplyResources(this.датарожденияDataGridViewTextBoxColumn, "датарожденияDataGridViewTextBoxColumn");
-            this.датарожденияDataGridViewTextBoxColumn.Name = "датарожденияDataGridViewTextBoxColumn";
-            // 
-            // видначисленийDataGridViewTextBoxColumn
-            // 
-            this.видначисленийDataGridViewTextBoxColumn.DataPropertyName = "вид_начислений";
-            resources.ApplyResources(this.видначисленийDataGridViewTextBoxColumn, "видначисленийDataGridViewTextBoxColumn");
-            this.видначисленийDataGridViewTextBoxColumn.Name = "видначисленийDataGridViewTextBoxColumn";
-            // 
-            // районпроживанияDataGridViewTextBoxColumn
-            // 
-            this.районпроживанияDataGridViewTextBoxColumn.DataPropertyName = "район_проживания";
-            resources.ApplyResources(this.районпроживанияDataGridViewTextBoxColumn, "районпроживанияDataGridViewTextBoxColumn");
-            this.районпроживанияDataGridViewTextBoxColumn.Name = "районпроживанияDataGridViewTextBoxColumn";
-            // 
-            // адреспроживанияDataGridViewTextBoxColumn
-            // 
-            this.адреспроживанияDataGridViewTextBoxColumn.DataPropertyName = "адрес_проживания";
-            resources.ApplyResources(this.адреспроживанияDataGridViewTextBoxColumn, "адреспроживанияDataGridViewTextBoxColumn");
-            this.адреспроживанияDataGridViewTextBoxColumn.Name = "адреспроживанияDataGridViewTextBoxColumn";
-            // 
-            // датаархивированияDataGridViewTextBoxColumn
-            // 
-            this.датаархивированияDataGridViewTextBoxColumn.DataPropertyName = "дата_архивирования";
-            resources.ApplyResources(this.датаархивированияDataGridViewTextBoxColumn, "датаархивированияDataGridViewTextBoxColumn");
-            this.датаархивированияDataGridViewTextBoxColumn.Name = "датаархивированияDataGridViewTextBoxColumn";
-            // 
-            // причинаархивированияDataGridViewTextBoxColumn
-            // 
-            this.причинаархивированияDataGridViewTextBoxColumn.DataPropertyName = "причина_архивирования";
-            resources.ApplyResources(this.причинаархивированияDataGridViewTextBoxColumn, "причинаархивированияDataGridViewTextBoxColumn");
-            this.причинаархивированияDataGridViewTextBoxColumn.Name = "причинаархивированияDataGridViewTextBoxColumn";
-            // 
-            // фиоархивариусаDataGridViewTextBoxColumn
-            // 
-            this.фиоархивариусаDataGridViewTextBoxColumn.DataPropertyName = "фио_архивариуса";
-            resources.ApplyResources(this.фиоархивариусаDataGridViewTextBoxColumn, "фиоархивариусаDataGridViewTextBoxColumn");
-            this.фиоархивариусаDataGridViewTextBoxColumn.Name = "фиоархивариусаDataGridViewTextBoxColumn";
             // 
             // general
             // 
