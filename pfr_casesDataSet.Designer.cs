@@ -32,10 +32,6 @@ namespace pfr {
         
         private пользователиDataTable tableпользователи;
         
-        private global::System.Data.DataRelation relationдействующие_дела_архивные_дела;
-        
-        private global::System.Data.DataRelation relationзапросы_архивных_дел_архивные_дела;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -270,8 +266,6 @@ namespace pfr {
                     this.tableпользователи.InitVars();
                 }
             }
-            this.relationдействующие_дела_архивные_дела = this.Relations["действующие_дела_архивные_дела"];
-            this.relationзапросы_архивных_дел_архивные_дела = this.Relations["запросы_архивных_дел_архивные_дела"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -290,14 +284,6 @@ namespace pfr {
             base.Tables.Add(this.tableзапросы_архивных_дел);
             this.tableпользователи = new пользователиDataTable();
             base.Tables.Add(this.tableпользователи);
-            this.relationдействующие_дела_архивные_дела = new global::System.Data.DataRelation("действующие_дела_архивные_дела", new global::System.Data.DataColumn[] {
-                        this.tableдействующие_дела.номер_делаColumn}, new global::System.Data.DataColumn[] {
-                        this.tableархивные_дела.номер_делаColumn}, false);
-            this.Relations.Add(this.relationдействующие_дела_архивные_дела);
-            this.relationзапросы_архивных_дел_архивные_дела = new global::System.Data.DataRelation("запросы_архивных_дел_архивные_дела", new global::System.Data.DataColumn[] {
-                        this.tableзапросы_архивных_дел.дата_передачи_в_отделColumn}, new global::System.Data.DataColumn[] {
-                        this.tableархивные_дела.дата_архивированияColumn}, false);
-            this.Relations.Add(this.relationзапросы_архивных_дел_архивные_дела);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -568,25 +554,19 @@ namespace pfr {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public архивные_делаRow Addархивные_делаRow(действующие_делаRow parentдействующие_делаRowByдействующие_дела_архивные_дела, string фио, System.DateTime дата_рождения, string вид_начислений, string район_проживания, char адрес_проживания, запросы_архивных_делRow parentзапросы_архивных_делRowByзапросы_архивных_дел_архивные_дела, string причина_архивирования, string фио_архивариуса) {
+            public архивные_делаRow Addархивные_делаRow(int номер_дела, string фио, System.DateTime дата_рождения, string вид_начислений, string район_проживания, string адрес_проживания, System.DateTime дата_архивирования, string причина_архивирования, string фио_архивариуса) {
                 архивные_делаRow rowархивные_делаRow = ((архивные_делаRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null,
+                        номер_дела,
                         фио,
                         дата_рождения,
                         вид_начислений,
                         район_проживания,
                         адрес_проживания,
-                        null,
+                        дата_архивирования,
                         причина_архивирования,
                         фио_архивариуса};
-                if ((parentдействующие_делаRowByдействующие_дела_архивные_дела != null)) {
-                    columnValuesArray[1] = parentдействующие_делаRowByдействующие_дела_архивные_дела[0];
-                }
-                if ((parentзапросы_архивных_делRowByзапросы_архивных_дел_архивные_дела != null)) {
-                    columnValuesArray[7] = parentзапросы_архивных_делRowByзапросы_архивных_дел_архивные_дела[1];
-                }
                 rowархивные_делаRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowархивные_делаRow);
                 return rowархивные_делаRow;
@@ -643,7 +623,7 @@ namespace pfr {
                 base.Columns.Add(this.columnвид_начислений);
                 this.columnрайон_проживания = new global::System.Data.DataColumn("район_проживания", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnрайон_проживания);
-                this.columnадрес_проживания = new global::System.Data.DataColumn("адрес_проживания", typeof(char), null, global::System.Data.MappingType.Element);
+                this.columnадрес_проживания = new global::System.Data.DataColumn("адрес_проживания", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnадрес_проживания);
                 this.columnдата_архивирования = new global::System.Data.DataColumn("дата_архивирования", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnдата_архивирования);
@@ -663,15 +643,11 @@ namespace pfr {
                 this.columnфио.MaxLength = 100;
                 this.columnдата_рождения.AllowDBNull = false;
                 this.columnвид_начислений.AllowDBNull = false;
-                this.columnвид_начислений.MaxLength = 80;
                 this.columnрайон_проживания.AllowDBNull = false;
-                this.columnрайон_проживания.MaxLength = 65;
                 this.columnадрес_проживания.AllowDBNull = false;
                 this.columnдата_архивирования.AllowDBNull = false;
                 this.columnпричина_архивирования.AllowDBNull = false;
-                this.columnпричина_архивирования.MaxLength = 60;
                 this.columnфио_архивариуса.AllowDBNull = false;
-                this.columnфио_архивариуса.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1033,16 +1009,11 @@ namespace pfr {
                 this.columnномер_дела.Unique = true;
                 this.columnдата_создания_дела.AllowDBNull = false;
                 this.columnфио.AllowDBNull = false;
-                this.columnфио.MaxLength = 100;
                 this.columnдата_рождения.AllowDBNull = false;
                 this.columnвид_начислений.AllowDBNull = false;
-                this.columnвид_начислений.MaxLength = 80;
                 this.columnснилс.AllowDBNull = false;
-                this.columnснилс.MaxLength = 20;
                 this.columnрайон_проживания.AllowDBNull = false;
-                this.columnрайон_проживания.MaxLength = 65;
                 this.columnадрес_проживания.AllowDBNull = false;
-                this.columnадрес_проживания.MaxLength = 70;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1915,9 +1886,9 @@ namespace pfr {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public char адрес_проживания {
+            public string адрес_проживания {
                 get {
-                    return ((char)(this[this.tableархивные_дела.адрес_проживанияColumn]));
+                    return ((string)(this[this.tableархивные_дела.адрес_проживанияColumn]));
                 }
                 set {
                     this[this.tableархивные_дела.адрес_проживанияColumn] = value;
@@ -1954,28 +1925,6 @@ namespace pfr {
                 }
                 set {
                     this[this.tableархивные_дела.фио_архивариусаColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public действующие_делаRow действующие_делаRow {
-                get {
-                    return ((действующие_делаRow)(this.GetParentRow(this.Table.ParentRelations["действующие_дела_архивные_дела"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["действующие_дела_архивные_дела"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public запросы_архивных_делRow запросы_архивных_делRow {
-                get {
-                    return ((запросы_архивных_делRow)(this.GetParentRow(this.Table.ParentRelations["запросы_архивных_дел_архивные_дела"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["запросы_архивных_дел_архивные_дела"]);
                 }
             }
         }
@@ -2081,17 +2030,6 @@ namespace pfr {
                     this[this.tableдействующие_дела.адрес_проживанияColumn] = value;
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public архивные_делаRow[] Getархивные_делаRows() {
-                if ((this.Table.ChildRelations["действующие_дела_архивные_дела"] == null)) {
-                    return new архивные_делаRow[0];
-                }
-                else {
-                    return ((архивные_делаRow[])(base.GetChildRows(this.Table.ChildRelations["действующие_дела_архивные_дела"])));
-                }
-            }
         }
         
         /// <summary>
@@ -2149,17 +2087,6 @@ namespace pfr {
                 }
                 set {
                     this[this.tableзапросы_архивных_дел.дата_повторного_архивированияColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public архивные_делаRow[] Getархивные_делаRows() {
-                if ((this.Table.ChildRelations["запросы_архивных_дел_архивные_дела"] == null)) {
-                    return new архивные_делаRow[0];
-                }
-                else {
-                    return ((архивные_делаRow[])(base.GetChildRows(this.Table.ChildRelations["запросы_архивных_дел_архивные_дела"])));
                 }
             }
         }
@@ -5008,6 +4935,15 @@ namespace pfr.pfr_casesDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(pfr_casesDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._архивные_делаTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.архивные_дела.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._архивные_делаTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._действующие_делаTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.действующие_дела.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -5023,15 +4959,6 @@ namespace pfr.pfr_casesDataSetTableAdapters {
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._запросы_архивных_делTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._архивные_делаTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.архивные_дела.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._архивные_делаTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -5054,6 +4981,14 @@ namespace pfr.pfr_casesDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(pfr_casesDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._архивные_делаTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.архивные_дела.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._архивные_делаTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._действующие_делаTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.действующие_дела.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -5067,14 +5002,6 @@ namespace pfr.pfr_casesDataSetTableAdapters {
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._запросы_архивных_делTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._архивные_делаTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.архивные_дела.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._архивные_делаTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -5104,14 +5031,6 @@ namespace pfr.pfr_casesDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._архивные_делаTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.архивные_дела.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._архивные_делаTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._запросы_архивных_делTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.запросы_архивных_дел.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -5125,6 +5044,14 @@ namespace pfr.pfr_casesDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._действующие_делаTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._архивные_делаTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.архивные_дела.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._архивные_делаTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

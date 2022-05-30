@@ -160,11 +160,11 @@ namespace pfr
             this.back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.back.FlatAppearance.BorderSize = 0;
             this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.back.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.back.Location = new System.Drawing.Point(12, 12);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(27, 27);
+            this.back.Size = new System.Drawing.Size(27, 37);
             this.back.TabIndex = 8;
             this.back.Text = "<";
             this.back.UseVisualStyleBackColor = false;

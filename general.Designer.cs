@@ -39,9 +39,24 @@ namespace pfr
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.архивныеделаBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pfr_casesDataSet = new pfr.pfr_casesDataSet();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.действующиеделаBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.администраторToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.действующие_делаTableAdapter = new pfr.pfr_casesDataSetTableAdapters.действующие_делаTableAdapter();
+            this.архивные_делаTableAdapter = new pfr.pfr_casesDataSetTableAdapters.архивные_делаTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.номерделаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.фиоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,23 +67,29 @@ namespace pfr
             this.датаархивированияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.причинаархивированияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.фиоархивариусаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.архивныеделаBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pfr_casesDataSet = new pfr.pfr_casesDataSet();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.действующиеделаBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.администраторToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.действующие_делаTableAdapter = new pfr.pfr_casesDataSetTableAdapters.действующие_делаTableAdapter();
-            this.архивные_делаTableAdapter = new pfr.pfr_casesDataSetTableAdapters.архивные_делаTableAdapter();
+            this.unarchiv = new System.Windows.Forms.Button();
+            this.delete_case = new System.Windows.Forms.Button();
+            this.excel_exoprt = new System.Windows.Forms.Button();
+            this.excel_export = new System.Windows.Forms.Button();
+            this.add_case = new System.Windows.Forms.Button();
+            this.add_to_archiv = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.pfr_casesDataSet1 = new pfr.pfr_casesDataSet();
+            this.запросыархивныхделBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.запросы_архивных_делTableAdapter = new pfr.pfr_casesDataSetTableAdapters.запросы_архивных_делTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датапередачивотделDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.фиоспециалистаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датаповторногоархивированияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерделаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датасозданияделаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.фиоDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датарожденияDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.видначисленийDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.снилсDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.районпроживанияDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.адреспроживанияDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -78,6 +99,10 @@ namespace pfr
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.действующиеделаBindingSource)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pfr_casesDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.запросыархивныхделBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -85,6 +110,7 @@ namespace pfr
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -92,6 +118,9 @@ namespace pfr
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.tabPage2.Controls.Add(this.excel_exoprt);
+            this.tabPage2.Controls.Add(this.delete_case);
+            this.tabPage2.Controls.Add(this.unarchiv);
             this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             resources.ApplyResources(this.tabPage2, "tabPage2");
@@ -136,10 +165,10 @@ namespace pfr
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
-            resources.ApplyResources(this.dataGridView2, "dataGridView2");
             this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridView2.EnableHeadersVisualStyles = false;
             this.dataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            resources.ApplyResources(this.dataGridView2, "dataGridView2");
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -154,6 +183,125 @@ namespace pfr
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView2.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.case_card_open_Archiv);
+            // 
+            // архивныеделаBindingSource
+            // 
+            this.архивныеделаBindingSource.DataMember = "архивные_дела";
+            this.архивныеделаBindingSource.DataSource = this.pfr_casesDataSet;
+            // 
+            // pfr_casesDataSet
+            // 
+            this.pfr_casesDataSet.DataSetName = "pfr_casesDataSet";
+            this.pfr_casesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Controls.Add(this.excel_export);
+            this.tabPage1.Controls.Add(this.add_case);
+            this.tabPage1.Controls.Add(this.add_to_archiv);
+            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tabPage1.Name = "tabPage1";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.номерделаDataGridViewTextBoxColumn1,
+            this.датасозданияделаDataGridViewTextBoxColumn,
+            this.фиоDataGridViewTextBoxColumn1,
+            this.датарожденияDataGridViewTextBoxColumn1,
+            this.видначисленийDataGridViewTextBoxColumn1,
+            this.снилсDataGridViewTextBoxColumn,
+            this.районпроживанияDataGridViewTextBoxColumn1,
+            this.адреспроживанияDataGridViewTextBoxColumn1});
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dataGridView1.DataSource = this.действующиеделаBindingSource;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
+            // действующиеделаBindingSource
+            // 
+            this.действующиеделаBindingSource.DataMember = "действующие_дела";
+            this.действующиеделаBindingSource.DataSource = this.pfr_casesDataSet;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1,
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Name = "statusStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.администраторToolStripMenuItem});
+            resources.ApplyResources(this.toolStripDropDownButton1, "toolStripDropDownButton1");
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            // 
+            // администраторToolStripMenuItem
+            // 
+            this.администраторToolStripMenuItem.Name = "администраторToolStripMenuItem";
+            resources.ApplyResources(this.администраторToolStripMenuItem, "администраторToolStripMenuItem");
+            this.администраторToolStripMenuItem.Click += new System.EventHandler(this.администраторToolStripMenuItem_Click);
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
+            // 
+            // действующие_делаTableAdapter
+            // 
+            this.действующие_делаTableAdapter.ClearBeforeFill = true;
+            // 
+            // архивные_делаTableAdapter
+            // 
+            this.архивные_делаTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -225,154 +373,213 @@ namespace pfr
             resources.ApplyResources(this.фиоархивариусаDataGridViewTextBoxColumn, "фиоархивариусаDataGridViewTextBoxColumn");
             this.фиоархивариусаDataGridViewTextBoxColumn.Name = "фиоархивариусаDataGridViewTextBoxColumn";
             // 
-            // архивныеделаBindingSource
+            // unarchiv
             // 
-            this.архивныеделаBindingSource.DataMember = "архивные_дела";
-            this.архивныеделаBindingSource.DataSource = this.pfr_casesDataSet;
+            resources.ApplyResources(this.unarchiv, "unarchiv");
+            this.unarchiv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.unarchiv.FlatAppearance.BorderSize = 0;
+            this.unarchiv.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.unarchiv.Name = "unarchiv";
+            this.unarchiv.UseVisualStyleBackColor = false;
             // 
-            // pfr_casesDataSet
+            // delete_case
             // 
-            this.pfr_casesDataSet.DataSetName = "pfr_casesDataSet";
-            this.pfr_casesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            resources.ApplyResources(this.delete_case, "delete_case");
+            this.delete_case.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.delete_case.FlatAppearance.BorderSize = 0;
+            this.delete_case.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.delete_case.Name = "delete_case";
+            this.delete_case.UseVisualStyleBackColor = false;
             // 
-            // tabPage1
+            // excel_exoprt
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tabPage1.Name = "tabPage1";
+            resources.ApplyResources(this.excel_exoprt, "excel_exoprt");
+            this.excel_exoprt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.excel_exoprt.FlatAppearance.BorderSize = 0;
+            this.excel_exoprt.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.excel_exoprt.Name = "excel_exoprt";
+            this.excel_exoprt.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // excel_export
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView1.DataSource = this.действующиеделаBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            resources.ApplyResources(this.excel_export, "excel_export");
+            this.excel_export.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.excel_export.FlatAppearance.BorderSize = 0;
+            this.excel_export.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.excel_export.Name = "excel_export";
+            this.excel_export.UseVisualStyleBackColor = false;
             // 
-            // dataGridViewTextBoxColumn3
+            // add_case
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "номер_дела";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            resources.ApplyResources(this.add_case, "add_case");
+            this.add_case.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.add_case.FlatAppearance.BorderSize = 0;
+            this.add_case.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.add_case.Name = "add_case";
+            this.add_case.UseVisualStyleBackColor = false;
+            this.add_case.Click += new System.EventHandler(this.add_case_Click);
             // 
-            // dataGridViewTextBoxColumn4
+            // add_to_archiv
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "фио";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            resources.ApplyResources(this.add_to_archiv, "add_to_archiv");
+            this.add_to_archiv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.add_to_archiv.FlatAppearance.BorderSize = 0;
+            this.add_to_archiv.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.add_to_archiv.Name = "add_to_archiv";
+            this.add_to_archiv.UseVisualStyleBackColor = false;
             // 
-            // dataGridViewTextBoxColumn5
+            // tabPage3
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "дата_рождения";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.tabPage3.Controls.Add(this.dataGridView3);
+            resources.ApplyResources(this.tabPage3, "tabPage3");
+            this.tabPage3.Name = "tabPage3";
             // 
-            // dataGridViewTextBoxColumn6
+            // dataGridView3
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "вид_начислений";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.dataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.датапередачивотделDataGridViewTextBoxColumn,
+            this.фиоспециалистаDataGridViewTextBoxColumn,
+            this.датаповторногоархивированияDataGridViewTextBoxColumn});
+            this.dataGridView3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dataGridView3.DataSource = this.запросыархивныхделBindingSource;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridView3.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dataGridView3.EnableHeadersVisualStyles = false;
+            this.dataGridView3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            resources.ApplyResources(this.dataGridView3, "dataGridView3");
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridView3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle12;
             // 
-            // dataGridViewTextBoxColumn7
+            // pfr_casesDataSet1
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "район_проживания";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.pfr_casesDataSet1.DataSetName = "pfr_casesDataSet";
+            this.pfr_casesDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataGridViewTextBoxColumn8
+            // запросыархивныхделBindingSource
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "адрес_проживания";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn8, "dataGridViewTextBoxColumn8");
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.запросыархивныхделBindingSource.DataMember = "запросы_архивных_дел";
+            this.запросыархивныхделBindingSource.DataSource = this.pfr_casesDataSet1;
             // 
-            // действующиеделаBindingSource
+            // запросы_архивных_делTableAdapter
             // 
-            this.действующиеделаBindingSource.DataMember = "действующие_дела";
-            this.действующиеделаBindingSource.DataSource = this.pfr_casesDataSet;
+            this.запросы_архивных_делTableAdapter.ClearBeforeFill = true;
             // 
-            // statusStrip1
+            // idDataGridViewTextBoxColumn
             // 
-            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1,
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Name = "statusStrip1";
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            resources.ApplyResources(this.idDataGridViewTextBoxColumn, "idDataGridViewTextBoxColumn");
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
-            // toolStripDropDownButton1
+            // датапередачивотделDataGridViewTextBoxColumn
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.администраторToolStripMenuItem});
-            resources.ApplyResources(this.toolStripDropDownButton1, "toolStripDropDownButton1");
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.датапередачивотделDataGridViewTextBoxColumn.DataPropertyName = "дата_передачи_в_отдел";
+            resources.ApplyResources(this.датапередачивотделDataGridViewTextBoxColumn, "датапередачивотделDataGridViewTextBoxColumn");
+            this.датапередачивотделDataGridViewTextBoxColumn.Name = "датапередачивотделDataGridViewTextBoxColumn";
             // 
-            // администраторToolStripMenuItem
+            // фиоспециалистаDataGridViewTextBoxColumn
             // 
-            this.администраторToolStripMenuItem.Name = "администраторToolStripMenuItem";
-            resources.ApplyResources(this.администраторToolStripMenuItem, "администраторToolStripMenuItem");
-            this.администраторToolStripMenuItem.Click += new System.EventHandler(this.администраторToolStripMenuItem_Click);
+            this.фиоспециалистаDataGridViewTextBoxColumn.DataPropertyName = "фио_специалиста";
+            resources.ApplyResources(this.фиоспециалистаDataGridViewTextBoxColumn, "фиоспециалистаDataGridViewTextBoxColumn");
+            this.фиоспециалистаDataGridViewTextBoxColumn.Name = "фиоспециалистаDataGridViewTextBoxColumn";
             // 
-            // toolStripStatusLabel1
+            // датаповторногоархивированияDataGridViewTextBoxColumn
             // 
-            this.toolStripStatusLabel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
+            this.датаповторногоархивированияDataGridViewTextBoxColumn.DataPropertyName = "дата_повторного_архивирования";
+            resources.ApplyResources(this.датаповторногоархивированияDataGridViewTextBoxColumn, "датаповторногоархивированияDataGridViewTextBoxColumn");
+            this.датаповторногоархивированияDataGridViewTextBoxColumn.Name = "датаповторногоархивированияDataGridViewTextBoxColumn";
             // 
-            // действующие_делаTableAdapter
+            // номерделаDataGridViewTextBoxColumn1
             // 
-            this.действующие_делаTableAdapter.ClearBeforeFill = true;
+            this.номерделаDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.номерделаDataGridViewTextBoxColumn1.DataPropertyName = "номер_дела";
+            resources.ApplyResources(this.номерделаDataGridViewTextBoxColumn1, "номерделаDataGridViewTextBoxColumn1");
+            this.номерделаDataGridViewTextBoxColumn1.Name = "номерделаDataGridViewTextBoxColumn1";
             // 
-            // архивные_делаTableAdapter
+            // датасозданияделаDataGridViewTextBoxColumn
             // 
-            this.архивные_делаTableAdapter.ClearBeforeFill = true;
+            this.датасозданияделаDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.датасозданияделаDataGridViewTextBoxColumn.DataPropertyName = "дата_создания_дела";
+            resources.ApplyResources(this.датасозданияделаDataGridViewTextBoxColumn, "датасозданияделаDataGridViewTextBoxColumn");
+            this.датасозданияделаDataGridViewTextBoxColumn.Name = "датасозданияделаDataGridViewTextBoxColumn";
+            // 
+            // фиоDataGridViewTextBoxColumn1
+            // 
+            this.фиоDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.фиоDataGridViewTextBoxColumn1.DataPropertyName = "фио";
+            resources.ApplyResources(this.фиоDataGridViewTextBoxColumn1, "фиоDataGridViewTextBoxColumn1");
+            this.фиоDataGridViewTextBoxColumn1.Name = "фиоDataGridViewTextBoxColumn1";
+            // 
+            // датарожденияDataGridViewTextBoxColumn1
+            // 
+            this.датарожденияDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.датарожденияDataGridViewTextBoxColumn1.DataPropertyName = "дата_рождения";
+            resources.ApplyResources(this.датарожденияDataGridViewTextBoxColumn1, "датарожденияDataGridViewTextBoxColumn1");
+            this.датарожденияDataGridViewTextBoxColumn1.Name = "датарожденияDataGridViewTextBoxColumn1";
+            // 
+            // видначисленийDataGridViewTextBoxColumn1
+            // 
+            this.видначисленийDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.видначисленийDataGridViewTextBoxColumn1.DataPropertyName = "вид_начислений";
+            resources.ApplyResources(this.видначисленийDataGridViewTextBoxColumn1, "видначисленийDataGridViewTextBoxColumn1");
+            this.видначисленийDataGridViewTextBoxColumn1.Name = "видначисленийDataGridViewTextBoxColumn1";
+            // 
+            // снилсDataGridViewTextBoxColumn
+            // 
+            this.снилсDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.снилсDataGridViewTextBoxColumn.DataPropertyName = "снилс";
+            resources.ApplyResources(this.снилсDataGridViewTextBoxColumn, "снилсDataGridViewTextBoxColumn");
+            this.снилсDataGridViewTextBoxColumn.Name = "снилсDataGridViewTextBoxColumn";
+            // 
+            // районпроживанияDataGridViewTextBoxColumn1
+            // 
+            this.районпроживанияDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.районпроживанияDataGridViewTextBoxColumn1.DataPropertyName = "район_проживания";
+            resources.ApplyResources(this.районпроживанияDataGridViewTextBoxColumn1, "районпроживанияDataGridViewTextBoxColumn1");
+            this.районпроживанияDataGridViewTextBoxColumn1.Name = "районпроживанияDataGridViewTextBoxColumn1";
+            // 
+            // адреспроживанияDataGridViewTextBoxColumn1
+            // 
+            this.адреспроживанияDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.адреспроживанияDataGridViewTextBoxColumn1.DataPropertyName = "адрес_проживания";
+            resources.ApplyResources(this.адреспроживанияDataGridViewTextBoxColumn1, "адреспроживанияDataGridViewTextBoxColumn1");
+            this.адреспроживанияDataGridViewTextBoxColumn1.Name = "адреспроживанияDataGridViewTextBoxColumn1";
             // 
             // general
             // 
@@ -394,6 +601,10 @@ namespace pfr
             ((System.ComponentModel.ISupportInitialize)(this.действующиеделаBindingSource)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pfr_casesDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.запросыархивныхделBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,12 +626,6 @@ namespace pfr
         private pfr_casesDataSetTableAdapters.архивные_делаTableAdapter архивные_делаTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn номерархивногоделаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn номерделаDataGridViewTextBoxColumn;
@@ -432,5 +637,28 @@ namespace pfr
         private System.Windows.Forms.DataGridViewTextBoxColumn датаархивированияDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn причинаархивированияDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn фиоархивариусаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button excel_exoprt;
+        private System.Windows.Forms.Button delete_case;
+        private System.Windows.Forms.Button unarchiv;
+        private System.Windows.Forms.Button excel_export;
+        private System.Windows.Forms.Button add_case;
+        private System.Windows.Forms.Button add_to_archiv;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private pfr_casesDataSet pfr_casesDataSet1;
+        private System.Windows.Forms.BindingSource запросыархивныхделBindingSource;
+        private pfr_casesDataSetTableAdapters.запросы_архивных_делTableAdapter запросы_архивных_делTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn датапередачивотделDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn фиоспециалистаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn датаповторногоархивированияDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерделаDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn датасозданияделаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn фиоDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn датарожденияDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn видначисленийDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn снилсDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn районпроживанияDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn адреспроживанияDataGridViewTextBoxColumn1;
     }
 }

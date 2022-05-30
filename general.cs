@@ -3,7 +3,6 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data;
 
-
 namespace pfr
 {
     public partial class general : Form
@@ -18,16 +17,14 @@ namespace pfr
 
         private void general_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "pfr_casesDataSet.архивные_дела". При необходимости она может быть перемещена или удалена.
+            this.запросы_архивных_делTableAdapter.Fill(this.pfr_casesDataSet1.запросы_архивных_дел);
             this.архивные_делаTableAdapter.Fill(this.pfr_casesDataSet.архивные_дела);
             this.действующие_делаTableAdapter.Fill(this.pfr_casesDataSet.действующие_дела);
-
-
         }
         private void администраторToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            admin_access access = new admin_access();
             this.Hide();
+            admin_access access = new admin_access();
             access.Show();
         }
         private void general_FormClosing_1(object sender, FormClosingEventArgs e)
@@ -41,6 +38,17 @@ namespace pfr
             MySqlCommand command = new MySqlCommand("select * from архивные_дела where номер_архивного_дела = '{select_num}'", db.GetConnection());
 
             MessageBox.Show(command.ToString());
+        }
+
+        private void add_case_Click(object sender, EventArgs e)
+        {
+            add_case add = new add_case();
+            add.Show();
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            dataGridView1.Refresh();    
         }
     }
 }
