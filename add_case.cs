@@ -37,8 +37,7 @@ namespace pfr
                 действующие_делаBindingSource.EndEdit();
                 действующие_делаTableAdapter.Update(pfr_casesDataSet);
                 MessageBox.Show("Данные успешно добавлены");
-                this.Close();
-               
+                this.Hide();
             }
             catch (Exception ex)
             {

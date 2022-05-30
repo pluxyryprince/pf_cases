@@ -96,6 +96,10 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Primitives.3.1.1\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.28\Assemblies\v4.8\MySql.Data.dll</HintPath>
@@ -197,6 +201,12 @@
     <Compile Include="admin_panel.Designer.cs">
       <DependentUpon>admin_panel.cs</DependentUpon>
     </Compile>
+    <Compile Include="archivation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="archivation.Designer.cs">
+      <DependentUpon>archivation.cs</DependentUpon>
+    </Compile>
     <Compile Include="authorization.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="admin_panel.resx">
       <DependentUpon>admin_panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="archivation.resx">
+      <DependentUpon>archivation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="authorization.resx">
       <DependentUpon>authorization.cs</DependentUpon>

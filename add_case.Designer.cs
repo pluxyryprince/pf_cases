@@ -52,8 +52,8 @@ namespace pfr
             this.район_проживанияTextBox = new System.Windows.Forms.TextBox();
             this.адрес_проживанияTextBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.add_account = new System.Windows.Forms.Button();
             this.clear_data = new System.Windows.Forms.Button();
+            this.add_account = new System.Windows.Forms.Button();
             номер_делаLabel = new System.Windows.Forms.Label();
             дата_создания_делаLabel = new System.Windows.Forms.Label();
             фиоLabel = new System.Windows.Forms.Label();
@@ -67,6 +67,132 @@ namespace pfr
             ((System.ComponentModel.ISupportInitialize)(this.действующие_делаBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // номер_делаLabel
+            // 
+            номер_делаLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            номер_делаLabel.AutoSize = true;
+            номер_делаLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            номер_делаLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            номер_делаLabel.Location = new System.Drawing.Point(39, 124);
+            номер_делаLabel.Name = "номер_делаLabel";
+            номер_делаLabel.Size = new System.Drawing.Size(89, 16);
+            номер_делаLabel.TabIndex = 1;
+            номер_делаLabel.Text = "Номер дела:";
+            // 
+            // дата_создания_делаLabel
+            // 
+            дата_создания_делаLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            дата_создания_делаLabel.AutoSize = true;
+            дата_создания_делаLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            дата_создания_делаLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            дата_создания_делаLabel.Location = new System.Drawing.Point(39, 151);
+            дата_создания_делаLabel.Name = "дата_создания_делаLabel";
+            дата_создания_делаLabel.Size = new System.Drawing.Size(143, 16);
+            дата_создания_делаLabel.TabIndex = 3;
+            дата_создания_делаLabel.Text = "Дата создания дела:";
+            // 
+            // фиоLabel
+            // 
+            фиоLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            фиоLabel.AutoSize = true;
+            фиоLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            фиоLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            фиоLabel.Location = new System.Drawing.Point(39, 176);
+            фиоLabel.Name = "фиоLabel";
+            фиоLabel.Size = new System.Drawing.Size(42, 16);
+            фиоLabel.TabIndex = 5;
+            фиоLabel.Text = "ФИО:";
+            // 
+            // дата_рожденияLabel
+            // 
+            дата_рожденияLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            дата_рожденияLabel.AutoSize = true;
+            дата_рожденияLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            дата_рожденияLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            дата_рожденияLabel.Location = new System.Drawing.Point(39, 203);
+            дата_рожденияLabel.Name = "дата_рожденияLabel";
+            дата_рожденияLabel.Size = new System.Drawing.Size(110, 16);
+            дата_рожденияLabel.TabIndex = 7;
+            дата_рожденияLabel.Text = "Дата рождения:";
+            // 
+            // вид_начисленийLabel
+            // 
+            вид_начисленийLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            вид_начисленийLabel.AutoSize = true;
+            вид_начисленийLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            вид_начисленийLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            вид_начисленийLabel.Location = new System.Drawing.Point(39, 228);
+            вид_начисленийLabel.Name = "вид_начисленийLabel";
+            вид_начисленийLabel.Size = new System.Drawing.Size(118, 16);
+            вид_начисленийLabel.TabIndex = 9;
+            вид_начисленийLabel.Text = "Вид начислений:";
+            // 
+            // снилсLabel
+            // 
+            снилсLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            снилсLabel.AutoSize = true;
+            снилсLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            снилсLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            снилсLabel.Location = new System.Drawing.Point(39, 254);
+            снилсLabel.Name = "снилсLabel";
+            снилсLabel.Size = new System.Drawing.Size(58, 16);
+            снилсLabel.TabIndex = 11;
+            снилсLabel.Text = "СНИЛС:";
+            // 
+            // район_проживанияLabel
+            // 
+            район_проживанияLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            район_проживанияLabel.AutoSize = true;
+            район_проживанияLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            район_проживанияLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            район_проживанияLabel.Location = new System.Drawing.Point(39, 280);
+            район_проживанияLabel.Name = "район_проживанияLabel";
+            район_проживанияLabel.Size = new System.Drawing.Size(135, 16);
+            район_проживанияLabel.TabIndex = 13;
+            район_проживанияLabel.Text = "Район проживания:";
+            // 
+            // адрес_проживанияLabel
+            // 
+            адрес_проживанияLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            адрес_проживанияLabel.AutoSize = true;
+            адрес_проживанияLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            адрес_проживанияLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            адрес_проживанияLabel.Location = new System.Drawing.Point(39, 306);
+            адрес_проживанияLabel.Name = "адрес_проживанияLabel";
+            адрес_проживанияLabel.Size = new System.Drawing.Size(134, 16);
+            адрес_проживанияLabel.TabIndex = 15;
+            адрес_проживанияLabel.Text = "Адрес проживания:";
+            // 
+            // label1
+            // 
+            label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            label1.Location = new System.Drawing.Point(25, 72);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(138, 20);
+            label1.TabIndex = 17;
+            label1.Text = "Введите данные";
             // 
             // pfr_casesDataSet
             // 
@@ -91,20 +217,6 @@ namespace pfr
             this.tableAdapterManager.запросы_архивных_делTableAdapter = null;
             this.tableAdapterManager.пользователиTableAdapter = null;
             // 
-            // номер_делаLabel
-            // 
-            номер_делаLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            номер_делаLabel.AutoSize = true;
-            номер_делаLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            номер_делаLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            номер_делаLabel.Location = new System.Drawing.Point(39, 124);
-            номер_делаLabel.Name = "номер_делаLabel";
-            номер_делаLabel.Size = new System.Drawing.Size(89, 16);
-            номер_делаLabel.TabIndex = 1;
-            номер_делаLabel.Text = "Номер дела:";
-            // 
             // номер_делаTextBox
             // 
             this.номер_делаTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -116,20 +228,6 @@ namespace pfr
             this.номер_делаTextBox.Name = "номер_делаTextBox";
             this.номер_делаTextBox.Size = new System.Drawing.Size(283, 22);
             this.номер_делаTextBox.TabIndex = 2;
-            // 
-            // дата_создания_делаLabel
-            // 
-            дата_создания_делаLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            дата_создания_делаLabel.AutoSize = true;
-            дата_создания_делаLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            дата_создания_делаLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            дата_создания_делаLabel.Location = new System.Drawing.Point(39, 151);
-            дата_создания_делаLabel.Name = "дата_создания_делаLabel";
-            дата_создания_делаLabel.Size = new System.Drawing.Size(143, 16);
-            дата_создания_делаLabel.TabIndex = 3;
-            дата_создания_делаLabel.Text = "Дата создания дела:";
             // 
             // дата_создания_делаDateTimePicker
             // 
@@ -143,20 +241,6 @@ namespace pfr
             this.дата_создания_делаDateTimePicker.Size = new System.Drawing.Size(283, 22);
             this.дата_создания_делаDateTimePicker.TabIndex = 4;
             // 
-            // фиоLabel
-            // 
-            фиоLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            фиоLabel.AutoSize = true;
-            фиоLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            фиоLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            фиоLabel.Location = new System.Drawing.Point(39, 176);
-            фиоLabel.Name = "фиоLabel";
-            фиоLabel.Size = new System.Drawing.Size(42, 16);
-            фиоLabel.TabIndex = 5;
-            фиоLabel.Text = "ФИО:";
-            // 
             // фиоTextBox
             // 
             this.фиоTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -168,20 +252,6 @@ namespace pfr
             this.фиоTextBox.Name = "фиоTextBox";
             this.фиоTextBox.Size = new System.Drawing.Size(283, 22);
             this.фиоTextBox.TabIndex = 6;
-            // 
-            // дата_рожденияLabel
-            // 
-            дата_рожденияLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            дата_рожденияLabel.AutoSize = true;
-            дата_рожденияLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            дата_рожденияLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            дата_рожденияLabel.Location = new System.Drawing.Point(39, 203);
-            дата_рожденияLabel.Name = "дата_рожденияLabel";
-            дата_рожденияLabel.Size = new System.Drawing.Size(110, 16);
-            дата_рожденияLabel.TabIndex = 7;
-            дата_рожденияLabel.Text = "Дата рождения:";
             // 
             // дата_рожденияDateTimePicker
             // 
@@ -195,20 +265,6 @@ namespace pfr
             this.дата_рожденияDateTimePicker.Size = new System.Drawing.Size(283, 22);
             this.дата_рожденияDateTimePicker.TabIndex = 8;
             // 
-            // вид_начисленийLabel
-            // 
-            вид_начисленийLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            вид_начисленийLabel.AutoSize = true;
-            вид_начисленийLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            вид_начисленийLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            вид_начисленийLabel.Location = new System.Drawing.Point(39, 228);
-            вид_начисленийLabel.Name = "вид_начисленийLabel";
-            вид_начисленийLabel.Size = new System.Drawing.Size(118, 16);
-            вид_начисленийLabel.TabIndex = 9;
-            вид_начисленийLabel.Text = "Вид начислений:";
-            // 
             // вид_начисленийTextBox
             // 
             this.вид_начисленийTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -220,20 +276,6 @@ namespace pfr
             this.вид_начисленийTextBox.Name = "вид_начисленийTextBox";
             this.вид_начисленийTextBox.Size = new System.Drawing.Size(283, 22);
             this.вид_начисленийTextBox.TabIndex = 10;
-            // 
-            // снилсLabel
-            // 
-            снилсLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            снилсLabel.AutoSize = true;
-            снилсLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            снилсLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            снилсLabel.Location = new System.Drawing.Point(39, 254);
-            снилсLabel.Name = "снилсLabel";
-            снилсLabel.Size = new System.Drawing.Size(58, 16);
-            снилсLabel.TabIndex = 11;
-            снилсLabel.Text = "СНИЛС:";
             // 
             // снилсTextBox
             // 
@@ -247,20 +289,6 @@ namespace pfr
             this.снилсTextBox.Size = new System.Drawing.Size(283, 22);
             this.снилсTextBox.TabIndex = 12;
             // 
-            // район_проживанияLabel
-            // 
-            район_проживанияLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            район_проживанияLabel.AutoSize = true;
-            район_проживанияLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            район_проживанияLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            район_проживанияLabel.Location = new System.Drawing.Point(39, 280);
-            район_проживанияLabel.Name = "район_проживанияLabel";
-            район_проживанияLabel.Size = new System.Drawing.Size(135, 16);
-            район_проживанияLabel.TabIndex = 13;
-            район_проживанияLabel.Text = "Район проживания:";
-            // 
             // район_проживанияTextBox
             // 
             this.район_проживанияTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -272,20 +300,6 @@ namespace pfr
             this.район_проживанияTextBox.Name = "район_проживанияTextBox";
             this.район_проживанияTextBox.Size = new System.Drawing.Size(283, 22);
             this.район_проживанияTextBox.TabIndex = 14;
-            // 
-            // адрес_проживанияLabel
-            // 
-            адрес_проживанияLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            адрес_проживанияLabel.AutoSize = true;
-            адрес_проживанияLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            адрес_проживанияLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            адрес_проживанияLabel.Location = new System.Drawing.Point(39, 306);
-            адрес_проживанияLabel.Name = "адрес_проживанияLabel";
-            адрес_проживанияLabel.Size = new System.Drawing.Size(134, 16);
-            адрес_проживанияLabel.TabIndex = 15;
-            адрес_проживанияLabel.Text = "Адрес проживания:";
             // 
             // адрес_проживанияTextBox
             // 
@@ -299,22 +313,10 @@ namespace pfr
             this.адрес_проживанияTextBox.Size = new System.Drawing.Size(283, 22);
             this.адрес_проживанияTextBox.TabIndex = 16;
             // 
-            // label1
-            // 
-            label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            label1.Location = new System.Drawing.Point(25, 72);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(138, 20);
-            label1.TabIndex = 17;
-            label1.Text = "Введите данные";
-            // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.clear_data);
             this.panel1.Controls.Add(this.add_account);
@@ -322,21 +324,6 @@ namespace pfr
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(529, 324);
             this.panel1.TabIndex = 18;
-            // 
-            // add_account
-            // 
-            this.add_account.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.add_account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.add_account.FlatAppearance.BorderSize = 0;
-            this.add_account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add_account.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.add_account.Location = new System.Drawing.Point(395, 291);
-            this.add_account.Name = "add_account";
-            this.add_account.Size = new System.Drawing.Size(129, 28);
-            this.add_account.TabIndex = 16;
-            this.add_account.Text = "Сохранить";
-            this.add_account.UseVisualStyleBackColor = false;
-            this.add_account.Click += new System.EventHandler(this.add_account_Click);
             // 
             // clear_data
             // 
@@ -352,12 +339,27 @@ namespace pfr
             this.clear_data.UseVisualStyleBackColor = false;
             this.clear_data.Click += new System.EventHandler(this.clear_data_Click);
             // 
+            // add_account
+            // 
+            this.add_account.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.add_account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.add_account.FlatAppearance.BorderSize = 0;
+            this.add_account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add_account.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.add_account.Location = new System.Drawing.Point(395, 291);
+            this.add_account.Name = "add_account";
+            this.add_account.Size = new System.Drawing.Size(129, 28);
+            this.add_account.TabIndex = 16;
+            this.add_account.Text = "Сохранить";
+            this.add_account.UseVisualStyleBackColor = false;
+            this.add_account.Click += new System.EventHandler(this.add_account_Click);
+            // 
             // add_case
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(553, 474);
+            this.ClientSize = new System.Drawing.Size(553, 446);
             this.Controls.Add(label1);
             this.Controls.Add(номер_делаLabel);
             this.Controls.Add(this.номер_делаTextBox);

@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data;
+using ExcelObj = Microsoft.Office.Interop.Excel;
+using System.Reflection;
 
 namespace pfr
 {
@@ -11,10 +13,24 @@ namespace pfr
         {
             InitializeComponent();
         }
-        DataTable table = new DataTable();
-        connector db = new connector();
-        MySqlDataAdapter adapter = new MySqlDataAdapter();
+        void exportData(DataGridView dataGrid)//метод для экспорта данных в эксель
+        {
+            ExcelObj.Application ExcelApp = new ExcelObj.Application();
+            ExcelObj.Workbook ExcelWorkBook;
+            ExcelObj.Worksheet ExcelWorkSheet;
+            ExcelWorkBook = ExcelApp.Workbooks.Add(Missing.Value);
+            ExcelWorkSheet = ExcelWorkBook.Worksheets.get_Item(1) as ExcelObj.Worksheet;
 
+            for (int i = 0; i < dataGrid.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGrid.ColumnCount; j++)
+                {
+                    ExcelApp.Cells[i + 1, j + 1] = dataGrid.Rows[i].Cells[j].Value;
+                }
+            }
+            ExcelApp.Visible = true;
+            ExcelApp.UserControl = true;
+        }
         private void general_Load(object sender, EventArgs e)
         {
             this.запросы_архивных_делTableAdapter.Fill(this.pfr_casesDataSet1.запросы_архивных_дел);
@@ -31,15 +47,6 @@ namespace pfr
         {         
             Application.Exit();
         }
-
-        private void case_card_open_Archiv(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            int select_num = dataGridView2.SelectedCells[0].RowIndex;
-            MySqlCommand command = new MySqlCommand("select * from архивные_дела where номер_архивного_дела = '{select_num}'", db.GetConnection());
-
-            MessageBox.Show(command.ToString());
-        }
-
         private void add_case_Click(object sender, EventArgs e)
         {
             add_case add = new add_case();
@@ -48,7 +55,66 @@ namespace pfr
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
-            dataGridView1.Refresh();    
+            dataGridView1.Refresh();
+            действующие_делаTableAdapter.Update(pfr_casesDataSet.действующие_дела);
+        }
+
+        private void dataGridView2_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            dataGridView2.Refresh();
+            архивные_делаTableAdapter.Update(pfr_casesDataSet.архивные_дела);
+        }
+
+        private void add_to_archiv_Click(object sender, EventArgs e)
+        {
+
+            archivation a = new archivation();
+            a.Show();
+        }
+
+        private void excel_export__current_cases_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                exportData(dataGridView1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return;
+            }
+        }
+
+        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            dataGridView1.Refresh();
+            действующие_делаTableAdapter.Update(pfr_casesDataSet.действующие_дела);
+        }
+
+        private void excel_exoprt_archiv_cases_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                exportData(dataGridView2);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return;
+            }
+        }
+
+        private void excel_exoprt_requests_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                exportData(dataGridView3);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return;
+            }
         }
     }
 }
