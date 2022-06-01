@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data;
+
 
 namespace pfr
 {
@@ -29,7 +31,16 @@ namespace pfr
         }
         private void archivate_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+              
+                MessageBox.Show("Дело перенесено в архив");
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
