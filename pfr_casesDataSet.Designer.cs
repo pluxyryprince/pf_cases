@@ -404,6 +404,8 @@ namespace pfr {
             
             private global::System.Data.DataColumn columnфио_архивариуса;
             
+            private global::System.Data.DataColumn columnфио_создавшего;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public архивные_делаDataTable() {
@@ -519,6 +521,14 @@ namespace pfr {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn фио_создавшегоColumn {
+                get {
+                    return this.columnфио_создавшего;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -554,7 +564,7 @@ namespace pfr {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public архивные_делаRow Addархивные_делаRow(int номер_дела, string фио, System.DateTime дата_рождения, string вид_начислений, string район_проживания, string адрес_проживания, System.DateTime дата_архивирования, string причина_архивирования, string фио_архивариуса) {
+            public архивные_делаRow Addархивные_делаRow(int номер_дела, string фио, System.DateTime дата_рождения, string вид_начислений, string район_проживания, string адрес_проживания, System.DateTime дата_архивирования, string причина_архивирования, string фио_архивариуса, string фио_создавшего) {
                 архивные_делаRow rowархивные_делаRow = ((архивные_делаRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -566,7 +576,8 @@ namespace pfr {
                         адрес_проживания,
                         дата_архивирования,
                         причина_архивирования,
-                        фио_архивариуса};
+                        фио_архивариуса,
+                        фио_создавшего};
                 rowархивные_делаRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowархивные_делаRow);
                 return rowархивные_делаRow;
@@ -606,6 +617,7 @@ namespace pfr {
                 this.columnдата_архивирования = base.Columns["дата_архивирования"];
                 this.columnпричина_архивирования = base.Columns["причина_архивирования"];
                 this.columnфио_архивариуса = base.Columns["фио_архивариуса"];
+                this.columnфио_создавшего = base.Columns["фио_создавшего"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -631,6 +643,8 @@ namespace pfr {
                 base.Columns.Add(this.columnпричина_архивирования);
                 this.columnфио_архивариуса = new global::System.Data.DataColumn("фио_архивариуса", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnфио_архивариуса);
+                this.columnфио_создавшего = new global::System.Data.DataColumn("фио_создавшего", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnфио_создавшего);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnномер_архивного_дела}, true));
                 this.columnномер_архивного_дела.AutoIncrement = true;
@@ -797,6 +811,8 @@ namespace pfr {
             
             private global::System.Data.DataColumn columnадрес_проживания;
             
+            private global::System.Data.DataColumn columnфио_создавшего;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public действующие_делаDataTable() {
@@ -896,6 +912,14 @@ namespace pfr {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn фио_создавшегоColumn {
+                get {
+                    return this.columnфио_создавшего;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -931,7 +955,7 @@ namespace pfr {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public действующие_делаRow Addдействующие_делаRow(System.DateTime дата_создания_дела, string фио, System.DateTime дата_рождения, string вид_начислений, string снилс, string район_проживания, string адрес_проживания) {
+            public действующие_делаRow Addдействующие_делаRow(System.DateTime дата_создания_дела, string фио, System.DateTime дата_рождения, string вид_начислений, string снилс, string район_проживания, string адрес_проживания, string фио_создавшего) {
                 действующие_делаRow rowдействующие_делаRow = ((действующие_делаRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -941,7 +965,8 @@ namespace pfr {
                         вид_начислений,
                         снилс,
                         район_проживания,
-                        адрес_проживания};
+                        адрес_проживания,
+                        фио_создавшего};
                 rowдействующие_делаRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowдействующие_делаRow);
                 return rowдействующие_делаRow;
@@ -979,6 +1004,7 @@ namespace pfr {
                 this.columnснилс = base.Columns["снилс"];
                 this.columnрайон_проживания = base.Columns["район_проживания"];
                 this.columnадрес_проживания = base.Columns["адрес_проживания"];
+                this.columnфио_создавшего = base.Columns["фио_создавшего"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1000,6 +1026,8 @@ namespace pfr {
                 base.Columns.Add(this.columnрайон_проживания);
                 this.columnадрес_проживания = new global::System.Data.DataColumn("адрес_проживания", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnадрес_проживания);
+                this.columnфио_создавшего = new global::System.Data.DataColumn("фио_создавшего", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnфио_создавшего);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnномер_дела}, true));
                 this.columnномер_дела.AutoIncrement = true;
@@ -1927,6 +1955,34 @@ namespace pfr {
                     this[this.tableархивные_дела.фио_архивариусаColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string фио_создавшего {
+                get {
+                    try {
+                        return ((string)(this[this.tableархивные_дела.фио_создавшегоColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'фио_создавшего\' в таблице \'архивные_дела\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableархивные_дела.фио_создавшегоColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isфио_создавшегоNull() {
+                return this.IsNull(this.tableархивные_дела.фио_создавшегоColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setфио_создавшегоNull() {
+                this[this.tableархивные_дела.фио_создавшегоColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -2029,6 +2085,34 @@ namespace pfr {
                 set {
                     this[this.tableдействующие_дела.адрес_проживанияColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string фио_создавшего {
+                get {
+                    try {
+                        return ((string)(this[this.tableдействующие_дела.фио_создавшегоColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'фио_создавшего\' в таблице \'действующие_дела\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableдействующие_дела.фио_создавшегоColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isфио_создавшегоNull() {
+                return this.IsNull(this.tableдействующие_дела.фио_создавшегоColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setфио_создавшегоNull() {
+                this[this.tableдействующие_дела.фио_создавшегоColumn] = global::System.Convert.DBNull;
             }
         }
         

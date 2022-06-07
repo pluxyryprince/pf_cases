@@ -49,6 +49,7 @@ namespace pfr
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.excel_exoprt_users = new System.Windows.Forms.Button();
             this.пользователиDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -109,7 +110,6 @@ namespace pfr
             this.tableAdapterManager = new pfr.pfr_casesDataSetTableAdapters.TableAdapterManager();
             this.действующие_делаTableAdapter = new pfr.pfr_casesDataSetTableAdapters.действующие_делаTableAdapter();
             this.архивные_делаTableAdapter = new pfr.pfr_casesDataSetTableAdapters.архивные_делаTableAdapter();
-            this.excel_exoprt_users = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             фио_специалистаLabel = new System.Windows.Forms.Label();
             должностьLabel = new System.Windows.Forms.Label();
@@ -251,6 +251,22 @@ namespace pfr
             this.tabPage1.Size = new System.Drawing.Size(924, 511);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Список учетных записей";
+            // 
+            // excel_exoprt_users
+            // 
+            this.excel_exoprt_users.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.excel_exoprt_users.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.excel_exoprt_users.FlatAppearance.BorderSize = 0;
+            this.excel_exoprt_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.excel_exoprt_users.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.excel_exoprt_users.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.excel_exoprt_users.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.excel_exoprt_users.Location = new System.Drawing.Point(158, 473);
+            this.excel_exoprt_users.Name = "excel_exoprt_users";
+            this.excel_exoprt_users.Size = new System.Drawing.Size(146, 30);
+            this.excel_exoprt_users.TabIndex = 16;
+            this.excel_exoprt_users.Text = "Экспорт в Excel";
+            this.excel_exoprt_users.UseVisualStyleBackColor = false;
             // 
             // пользователиDataGridView
             // 
@@ -971,22 +987,6 @@ namespace pfr
             // 
             this.архивные_делаTableAdapter.ClearBeforeFill = true;
             // 
-            // excel_exoprt_users
-            // 
-            this.excel_exoprt_users.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.excel_exoprt_users.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.excel_exoprt_users.FlatAppearance.BorderSize = 0;
-            this.excel_exoprt_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.excel_exoprt_users.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.excel_exoprt_users.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.excel_exoprt_users.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.excel_exoprt_users.Location = new System.Drawing.Point(158, 473);
-            this.excel_exoprt_users.Name = "excel_exoprt_users";
-            this.excel_exoprt_users.Size = new System.Drawing.Size(146, 30);
-            this.excel_exoprt_users.TabIndex = 16;
-            this.excel_exoprt_users.Text = "Экспорт в Excel";
-            this.excel_exoprt_users.UseVisualStyleBackColor = false;
-            // 
             // admin_panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1001,6 +1001,7 @@ namespace pfr
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "admin_panel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Панель администратора";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.admin_panel_FormClosing);
             this.Load += new System.EventHandler(this.admin_authorization_Load);
             this.tabControl1.ResumeLayout(false);

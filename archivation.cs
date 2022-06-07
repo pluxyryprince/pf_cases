@@ -26,16 +26,18 @@ namespace pfr
         }
         private void archivation_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "pfr_casesDataSet.архивные_дела". При необходимости она может быть перемещена или удалена.
+            this.архивные_делаTableAdapter.Fill(this.pfr_casesDataSet.архивные_дела);
             this.действующие_делаTableAdapter.Fill(this.pfr_casesDataSet.действующие_дела);
             this.запросы_архивных_делTableAdapter.Fill(this.pfr_casesDataSet.запросы_архивных_дел);
         }
-        private void archivate_Click(object sender, EventArgs e)
+
+        private void add_to_archiv_Click(object sender, EventArgs e)
         {
             try
             {
-              
-                MessageBox.Show("Дело перенесено в архив");
-                this.Hide();
+                запросы_архивных_делBindingSource.AddNew();
+                архивные_делаBindingSource.AddNew();
             }
             catch (Exception ex)
             {

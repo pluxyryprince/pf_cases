@@ -30,37 +30,136 @@ namespace pfr
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(archivation));
             System.Windows.Forms.Label label2;
+            System.Windows.Forms.Label дата_передачи_в_отделLabel;
+            System.Windows.Forms.Label фио_специалистаLabel;
+            System.Windows.Forms.Label дата_повторного_архивированияLabel;
+            System.Windows.Forms.Label дата_архивированияLabel;
+            System.Windows.Forms.Label причина_архивированияLabel;
+            System.Windows.Forms.Label фио_архивариусаLabel;
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.дата_передачи_в_отделDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.фио_специалистаTextBox = new System.Windows.Forms.TextBox();
+            this.дата_повторного_архивированияDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.действующие_делаBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pfr_casesDataSet = new pfr.pfr_casesDataSet();
             this.запросы_архивных_делBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.запросы_архивных_делTableAdapter = new pfr.pfr_casesDataSetTableAdapters.запросы_архивных_делTableAdapter();
             this.tableAdapterManager = new pfr.pfr_casesDataSetTableAdapters.TableAdapterManager();
             this.действующие_делаTableAdapter = new pfr.pfr_casesDataSetTableAdapters.действующие_делаTableAdapter();
-            this.запросы_архивных_делBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.запросы_архивных_делBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.действующие_делаBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.archivate = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.архивные_делаBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.архивные_делаTableAdapter = new pfr.pfr_casesDataSetTableAdapters.архивные_делаTableAdapter();
+            this.дата_архивированияDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.причина_архивированияTextBox = new System.Windows.Forms.TextBox();
+            this.фио_архивариусаTextBox = new System.Windows.Forms.TextBox();
+            this.add_to_archiv = new System.Windows.Forms.Button();
             label2 = new System.Windows.Forms.Label();
+            дата_передачи_в_отделLabel = new System.Windows.Forms.Label();
+            фио_специалистаLabel = new System.Windows.Forms.Label();
+            дата_повторного_архивированияLabel = new System.Windows.Forms.Label();
+            дата_архивированияLabel = new System.Windows.Forms.Label();
+            причина_архивированияLabel = new System.Windows.Forms.Label();
+            фио_архивариусаLabel = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.действующие_делаBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pfr_casesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.запросы_архивных_делBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.запросы_архивных_делBindingNavigator)).BeginInit();
-            this.запросы_архивных_делBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.действующие_делаBindingSource)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.архивные_делаBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label2
+            // 
+            label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            label2.Location = new System.Drawing.Point(28, 64);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(140, 20);
+            label2.TabIndex = 20;
+            label2.Text = "Укажите данные ";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.add_to_archiv);
+            this.panel1.Controls.Add(дата_архивированияLabel);
+            this.panel1.Controls.Add(this.дата_архивированияDateTimePicker);
+            this.panel1.Controls.Add(причина_архивированияLabel);
+            this.panel1.Controls.Add(this.причина_архивированияTextBox);
+            this.panel1.Controls.Add(фио_архивариусаLabel);
+            this.panel1.Controls.Add(this.фио_архивариусаTextBox);
+            this.panel1.Controls.Add(дата_передачи_в_отделLabel);
+            this.panel1.Controls.Add(this.дата_передачи_в_отделDateTimePicker);
+            this.panel1.Controls.Add(фио_специалистаLabel);
+            this.panel1.Controls.Add(this.фио_специалистаTextBox);
+            this.panel1.Controls.Add(дата_повторного_архивированияLabel);
+            this.panel1.Controls.Add(this.дата_повторного_архивированияDateTimePicker);
+            this.panel1.Location = new System.Drawing.Point(12, 76);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(654, 379);
+            this.panel1.TabIndex = 19;
+            // 
+            // дата_передачи_в_отделLabel
+            // 
+            дата_передачи_в_отделLabel.AutoSize = true;
+            дата_передачи_в_отделLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            дата_передачи_в_отделLabel.Location = new System.Drawing.Point(81, 31);
+            дата_передачи_в_отделLabel.Name = "дата_передачи_в_отделLabel";
+            дата_передачи_в_отделLabel.Size = new System.Drawing.Size(163, 16);
+            дата_передачи_в_отделLabel.TabIndex = 20;
+            дата_передачи_в_отделLabel.Text = "Дата передачи в отдел:";
+            // 
+            // дата_передачи_в_отделDateTimePicker
+            // 
+            this.дата_передачи_в_отделDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.запросы_архивных_делBindingSource, "дата_передачи_в_отдел", true));
+            this.дата_передачи_в_отделDateTimePicker.Location = new System.Drawing.Point(251, 25);
+            this.дата_передачи_в_отделDateTimePicker.Name = "дата_передачи_в_отделDateTimePicker";
+            this.дата_передачи_в_отделDateTimePicker.Size = new System.Drawing.Size(351, 22);
+            this.дата_передачи_в_отделDateTimePicker.TabIndex = 21;
+            // 
+            // фио_специалистаLabel
+            // 
+            фио_специалистаLabel.AutoSize = true;
+            фио_специалистаLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            фио_специалистаLabel.Location = new System.Drawing.Point(105, 59);
+            фио_специалистаLabel.Name = "фио_специалистаLabel";
+            фио_специалистаLabel.Size = new System.Drawing.Size(139, 16);
+            фио_специалистаLabel.TabIndex = 22;
+            фио_специалистаLabel.Text = "ФИО запросившего:";
+            // 
+            // фио_специалистаTextBox
+            // 
+            this.фио_специалистаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.запросы_архивных_делBindingSource, "фио_специалиста", true));
+            this.фио_специалистаTextBox.Location = new System.Drawing.Point(251, 53);
+            this.фио_специалистаTextBox.Name = "фио_специалистаTextBox";
+            this.фио_специалистаTextBox.Size = new System.Drawing.Size(351, 22);
+            this.фио_специалистаTextBox.TabIndex = 23;
+            // 
+            // дата_повторного_архивированияLabel
+            // 
+            дата_повторного_архивированияLabel.AutoSize = true;
+            дата_повторного_архивированияLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            дата_повторного_архивированияLabel.Location = new System.Drawing.Point(17, 87);
+            дата_повторного_архивированияLabel.Name = "дата_повторного_архивированияLabel";
+            дата_повторного_архивированияLabel.Size = new System.Drawing.Size(227, 16);
+            дата_повторного_архивированияLabel.TabIndex = 24;
+            дата_повторного_архивированияLabel.Text = "Дата повторного архивирования:";
+            // 
+            // дата_повторного_архивированияDateTimePicker
+            // 
+            this.дата_повторного_архивированияDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.запросы_архивных_делBindingSource, "дата_повторного_архивирования", true));
+            this.дата_повторного_архивированияDateTimePicker.Location = new System.Drawing.Point(251, 81);
+            this.дата_повторного_архивированияDateTimePicker.Name = "дата_повторного_архивированияDateTimePicker";
+            this.дата_повторного_архивированияDateTimePicker.Size = new System.Drawing.Size(351, 22);
+            this.дата_повторного_архивированияDateTimePicker.TabIndex = 25;
+            // 
+            // действующие_делаBindingSource
+            // 
+            this.действующие_делаBindingSource.DataMember = "действующие_дела";
+            this.действующие_делаBindingSource.DataSource = this.pfr_casesDataSet;
             // 
             // pfr_casesDataSet
             // 
@@ -89,193 +188,105 @@ namespace pfr
             // 
             this.действующие_делаTableAdapter.ClearBeforeFill = true;
             // 
-            // запросы_архивных_делBindingNavigator
+            // архивные_делаBindingSource
             // 
-            this.запросы_архивных_делBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.запросы_архивных_делBindingNavigator.BindingSource = this.запросы_архивных_делBindingSource;
-            this.запросы_архивных_делBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.запросы_архивных_делBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.запросы_архивных_делBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.запросы_архивных_делBindingNavigatorSaveItem});
-            this.запросы_архивных_делBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.запросы_архивных_делBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.запросы_архивных_делBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.запросы_архивных_делBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.запросы_архивных_делBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.запросы_архивных_делBindingNavigator.Name = "запросы_архивных_делBindingNavigator";
-            this.запросы_архивных_делBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.запросы_архивных_делBindingNavigator.Size = new System.Drawing.Size(629, 25);
-            this.запросы_архивных_делBindingNavigator.TabIndex = 0;
-            this.запросы_архивных_делBindingNavigator.Text = "bindingNavigator1";
+            this.архивные_делаBindingSource.DataMember = "архивные_дела";
+            this.архивные_делаBindingSource.DataSource = this.pfr_casesDataSet;
             // 
-            // bindingNavigatorAddNewItem
+            // архивные_делаTableAdapter
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            this.архивные_делаTableAdapter.ClearBeforeFill = true;
             // 
-            // bindingNavigatorCountItem
+            // дата_архивированияLabel
             // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(46, 22);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            дата_архивированияLabel.AutoSize = true;
+            дата_архивированияLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            дата_архивированияLabel.Location = new System.Drawing.Point(98, 115);
+            дата_архивированияLabel.Name = "дата_архивированияLabel";
+            дата_архивированияLabel.Size = new System.Drawing.Size(147, 16);
+            дата_архивированияLabel.TabIndex = 39;
+            дата_архивированияLabel.Text = "Дата архивирования:";
             // 
-            // bindingNavigatorDeleteItem
+            // дата_архивированияDateTimePicker
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.дата_архивированияDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.архивные_делаBindingSource, "дата_архивирования", true));
+            this.дата_архивированияDateTimePicker.Location = new System.Drawing.Point(251, 109);
+            this.дата_архивированияDateTimePicker.Name = "дата_архивированияDateTimePicker";
+            this.дата_архивированияDateTimePicker.Size = new System.Drawing.Size(351, 22);
+            this.дата_архивированияDateTimePicker.TabIndex = 40;
             // 
-            // bindingNavigatorMoveFirstItem
+            // причина_архивированияLabel
             // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
+            причина_архивированияLabel.AutoSize = true;
+            причина_архивированияLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            причина_архивированияLabel.Location = new System.Drawing.Point(73, 143);
+            причина_архивированияLabel.Name = "причина_архивированияLabel";
+            причина_архивированияLabel.Size = new System.Drawing.Size(173, 16);
+            причина_архивированияLabel.TabIndex = 41;
+            причина_архивированияLabel.Text = "Причина архивирования:";
             // 
-            // bindingNavigatorMovePreviousItem
+            // причина_архивированияTextBox
             // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
+            this.причина_архивированияTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.архивные_делаBindingSource, "причина_архивирования", true));
+            this.причина_архивированияTextBox.Location = new System.Drawing.Point(251, 137);
+            this.причина_архивированияTextBox.Name = "причина_архивированияTextBox";
+            this.причина_архивированияTextBox.Size = new System.Drawing.Size(351, 22);
+            this.причина_архивированияTextBox.TabIndex = 42;
             // 
-            // bindingNavigatorSeparator
+            // фио_архивариусаLabel
             // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            фио_архивариусаLabel.AutoSize = true;
+            фио_архивариусаLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            фио_архивариусаLabel.Location = new System.Drawing.Point(118, 171);
+            фио_архивариусаLabel.Name = "фио_архивариусаLabel";
+            фио_архивариусаLabel.Size = new System.Drawing.Size(130, 16);
+            фио_архивариусаLabel.TabIndex = 43;
+            фио_архивариусаLabel.Text = "ФИО архивариуса:";
             // 
-            // bindingNavigatorPositionItem
+            // фио_архивариусаTextBox
             // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Положение";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
+            this.фио_архивариусаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.архивные_делаBindingSource, "фио_архивариуса", true));
+            this.фио_архивариусаTextBox.Location = new System.Drawing.Point(251, 165);
+            this.фио_архивариусаTextBox.Name = "фио_архивариусаTextBox";
+            this.фио_архивариусаTextBox.Size = new System.Drawing.Size(351, 22);
+            this.фио_архивариусаTextBox.TabIndex = 44;
             // 
-            // bindingNavigatorSeparator1
+            // add_to_archiv
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // запросы_архивных_делBindingNavigatorSaveItem
-            // 
-            this.запросы_архивных_делBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.запросы_архивных_делBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("запросы_архивных_делBindingNavigatorSaveItem.Image")));
-            this.запросы_архивных_делBindingNavigatorSaveItem.Name = "запросы_архивных_делBindingNavigatorSaveItem";
-            this.запросы_архивных_делBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.запросы_архивных_делBindingNavigatorSaveItem.Text = "Сохранить данные";
-            this.запросы_архивных_делBindingNavigatorSaveItem.Click += new System.EventHandler(this.запросы_архивных_делBindingNavigatorSaveItem_Click);
-            // 
-            // действующие_делаBindingSource
-            // 
-            this.действующие_делаBindingSource.DataMember = "действующие_дела";
-            this.действующие_делаBindingSource.DataSource = this.pfr_casesDataSet;
-            // 
-            // archivate
-            // 
-            this.archivate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.archivate.FlatAppearance.BorderSize = 0;
-            this.archivate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.archivate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.archivate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.archivate.Location = new System.Drawing.Point(482, 273);
-            this.archivate.Name = "archivate";
-            this.archivate.Size = new System.Drawing.Size(120, 25);
-            this.archivate.TabIndex = 18;
-            this.archivate.Text = "Архивировать";
-            this.archivate.UseVisualStyleBackColor = false;
-            this.archivate.Click += new System.EventHandler(this.archivate_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.archivate);
-            this.panel1.Location = new System.Drawing.Point(12, 76);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(605, 301);
-            this.panel1.TabIndex = 19;
-            // 
-            // label2
-            // 
-            label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            label2.Location = new System.Drawing.Point(28, 64);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(140, 20);
-            label2.TabIndex = 20;
-            label2.Text = "Укажите данные ";
+            this.add_to_archiv.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.add_to_archiv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.add_to_archiv.FlatAppearance.BorderSize = 0;
+            this.add_to_archiv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add_to_archiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.add_to_archiv.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.add_to_archiv.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.add_to_archiv.Location = new System.Drawing.Point(503, 345);
+            this.add_to_archiv.Name = "add_to_archiv";
+            this.add_to_archiv.Size = new System.Drawing.Size(146, 29);
+            this.add_to_archiv.TabIndex = 45;
+            this.add_to_archiv.Text = "Архивировать";
+            this.add_to_archiv.UseVisualStyleBackColor = false;
+            this.add_to_archiv.Click += new System.EventHandler(this.add_to_archiv_Click);
             // 
             // archivation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(629, 424);
+            this.ClientSize = new System.Drawing.Size(678, 480);
             this.Controls.Add(label2);
-            this.Controls.Add(this.запросы_архивных_делBindingNavigator);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "archivation";
             this.Text = "Архивировать дело";
             this.Load += new System.EventHandler(this.archivation_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.действующие_делаBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pfr_casesDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.запросы_архивных_делBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.запросы_архивных_делBindingNavigator)).EndInit();
-            this.запросы_архивных_делBindingNavigator.ResumeLayout(false);
-            this.запросы_архивных_делBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.действующие_делаBindingSource)).EndInit();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.архивные_делаBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,22 +298,17 @@ namespace pfr
         private System.Windows.Forms.BindingSource запросы_архивных_делBindingSource;
         private pfr_casesDataSetTableAdapters.запросы_архивных_делTableAdapter запросы_архивных_делTableAdapter;
         private pfr_casesDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator запросы_архивных_делBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton запросы_архивных_делBindingNavigatorSaveItem;
         private pfr_casesDataSetTableAdapters.действующие_делаTableAdapter действующие_делаTableAdapter;
         private System.Windows.Forms.BindingSource действующие_делаBindingSource;
-        private System.Windows.Forms.Button archivate;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DateTimePicker дата_передачи_в_отделDateTimePicker;
+        private System.Windows.Forms.TextBox фио_специалистаTextBox;
+        private System.Windows.Forms.DateTimePicker дата_повторного_архивированияDateTimePicker;
+        private System.Windows.Forms.BindingSource архивные_делаBindingSource;
+        private pfr_casesDataSetTableAdapters.архивные_делаTableAdapter архивные_делаTableAdapter;
+        private System.Windows.Forms.DateTimePicker дата_архивированияDateTimePicker;
+        private System.Windows.Forms.TextBox причина_архивированияTextBox;
+        private System.Windows.Forms.TextBox фио_архивариусаTextBox;
+        private System.Windows.Forms.Button add_to_archiv;
     }
 }

@@ -65,9 +65,13 @@ namespace pfr
             архивные_делаTableAdapter.Update(pfr_casesDataSet.архивные_дела);
         }
 
-        private void add_to_archiv_Click(object sender, EventArgs e)
+        public void add_to_archiv_Click(object sender, EventArgs e)
         {
-
+            string s = dataGridView1.CurrentCell.Value.ToString();
+            string command = "INSERT INTO `архивные_дела` (`номер_архивного_дела`," +
+                " `номер_дела`, `фио`, `дата_рождения`, `вид_начислений`, `район_проживания`," +
+                " `адрес_проживания`, `фио_создавшего`, `дата_архивирования`, `причина_архивирования`," +
+                " `фио_архивариуса`) VALUES (NULL, '', '', '', '', '', '', '', {}, '', '')";
             archivation a = new archivation();
             a.Show();
         }
@@ -115,6 +119,11 @@ namespace pfr
                 MessageBox.Show(ex.ToString());
                 return;
             }
+        }
+
+        private void unarchiv_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

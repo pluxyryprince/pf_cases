@@ -154,6 +154,7 @@ namespace pfr
             this.unarchiv.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.unarchiv.Name = "unarchiv";
             this.unarchiv.UseVisualStyleBackColor = false;
+            this.unarchiv.Click += new System.EventHandler(this.unarchiv_Click);
             // 
             // dataGridView2
             // 
