@@ -145,6 +145,7 @@ namespace pfr
             this.delete_case.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.delete_case.Name = "delete_case";
             this.delete_case.UseVisualStyleBackColor = false;
+            this.delete_case.Click += new System.EventHandler(this.delete_case_Click);
             // 
             // unarchiv
             // 

@@ -39,6 +39,7 @@ namespace pfr
             System.Windows.Forms.Label район_проживанияLabel;
             System.Windows.Forms.Label адрес_проживанияLabel;
             System.Windows.Forms.Label label1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(add_case));
             this.pfr_casesDataSet = new pfr.pfr_casesDataSet();
             this.действующие_делаBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.действующие_делаTableAdapter = new pfr.pfr_casesDataSetTableAdapters.действующие_делаTableAdapter();
@@ -378,6 +379,7 @@ namespace pfr
             this.Controls.Add(адрес_проживанияLabel);
             this.Controls.Add(this.адрес_проживанияTextBox);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "add_case";
             this.Text = "Добавить дело";
             this.Load += new System.EventHandler(this.add_case_Load);

@@ -50,7 +50,7 @@ namespace pfr
             this.go.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.go.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.go.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.go.Location = new System.Drawing.Point(107, 256);
+            this.go.Location = new System.Drawing.Point(107, 269);
             this.go.Margin = new System.Windows.Forms.Padding(4);
             this.go.Name = "go";
             this.go.Size = new System.Drawing.Size(165, 48);
@@ -153,7 +153,7 @@ namespace pfr
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(371, 317);
+            this.ClientSize = new System.Drawing.Size(371, 330);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

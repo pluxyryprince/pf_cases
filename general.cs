@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using System.Data;
 using ExcelObj = Microsoft.Office.Interop.Excel;
 using System.Reflection;
 
@@ -123,7 +121,14 @@ namespace pfr
 
         private void unarchiv_Click(object sender, EventArgs e)
         {
+            unarchivation a = new unarchivation();
+            a.Show();
+        }
 
+        private void delete_case_Click(object sender, EventArgs e)
+        {
+            delete_case d = new delete_case();
+            d.Show();
         }
     }
 }

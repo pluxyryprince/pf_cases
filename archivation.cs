@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data;
 
@@ -33,6 +26,11 @@ namespace pfr
         }
 
         private void add_to_archiv_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void clear_data_Click(object sender, EventArgs e)
         {
             try
             {
