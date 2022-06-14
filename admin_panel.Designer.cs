@@ -267,6 +267,7 @@ namespace pfr
             this.excel_exoprt_users.TabIndex = 16;
             this.excel_exoprt_users.Text = "Экспорт в Excel";
             this.excel_exoprt_users.UseVisualStyleBackColor = false;
+            this.excel_exoprt_users.Click += new System.EventHandler(this.excel_exoprt_users_Click);
             // 
             // пользователиDataGridView
             // 
@@ -597,7 +598,7 @@ namespace pfr
             this.toolStripDropDownButton2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(99, 552);
+            this.statusStrip1.Size = new System.Drawing.Size(96, 552);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -605,7 +606,7 @@ namespace pfr
             // 
             this.toolStripStatusLabel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(97, 15);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(94, 15);
             this.toolStripStatusLabel1.Text = "Администратор";
             // 
             // toolStripDropDownButton1
@@ -617,13 +618,13 @@ namespace pfr
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(97, 20);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(94, 20);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // пользовательToolStripMenuItem
             // 
             this.пользовательToolStripMenuItem.Name = "пользовательToolStripMenuItem";
-            this.пользовательToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.пользовательToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.пользовательToolStripMenuItem.Text = "Пользователь";
             this.пользовательToolStripMenuItem.Click += new System.EventHandler(this.пользовательToolStripMenuItem_Click);
             // 
@@ -631,7 +632,7 @@ namespace pfr
             // 
             this.toolStripStatusLabel2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(97, 15);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(94, 15);
             this.toolStripStatusLabel2.Text = "Отображать:";
             // 
             // toolStripDropDownButton2
@@ -646,20 +647,20 @@ namespace pfr
             this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(97, 20);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(94, 20);
             this.toolStripDropDownButton2.Text = "toolStripDropDownButton2";
             // 
             // пенсионныеДелаToolStripMenuItem1
             // 
             this.пенсионныеДелаToolStripMenuItem1.Name = "пенсионныеДелаToolStripMenuItem1";
-            this.пенсионныеДелаToolStripMenuItem1.Size = new System.Drawing.Size(179, 22);
+            this.пенсионныеДелаToolStripMenuItem1.Size = new System.Drawing.Size(173, 22);
             this.пенсионныеДелаToolStripMenuItem1.Text = "Пенсионные дела";
             this.пенсионныеДелаToolStripMenuItem1.Click += new System.EventHandler(this.пенсионныеДелаToolStripMenuItem1_Click);
             // 
             // учетныеЗаписиToolStripMenuItem1
             // 
             this.учетныеЗаписиToolStripMenuItem1.Name = "учетныеЗаписиToolStripMenuItem1";
-            this.учетныеЗаписиToolStripMenuItem1.Size = new System.Drawing.Size(179, 22);
+            this.учетныеЗаписиToolStripMenuItem1.Size = new System.Drawing.Size(173, 22);
             this.учетныеЗаписиToolStripMenuItem1.Text = "Учетные записи";
             this.учетныеЗаписиToolStripMenuItem1.Click += new System.EventHandler(this.учетныеЗаписиToolStripMenuItem1_Click);
             // 

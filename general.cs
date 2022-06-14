@@ -130,5 +130,10 @@ namespace pfr
             delete_case d = new delete_case();
             d.Show();
         }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

@@ -566,6 +566,7 @@ namespace pfr
             this.toolStripDropDownButton1,
             this.toolStripStatusLabel1});
             this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
             // 
             // toolStripDropDownButton1
             // 

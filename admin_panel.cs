@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using ExcelObj = Microsoft.Office.Interop.Excel;
+using System.Reflection;
 
 namespace pfr
 {
@@ -8,6 +10,24 @@ namespace pfr
         public admin_panel()
         {
             InitializeComponent();
+        }
+        void exportData(DataGridView dataGrid)//метод для экспорта данных в эксель
+        {
+            ExcelObj.Application ExcelApp = new ExcelObj.Application();
+            ExcelObj.Workbook ExcelWorkBook;
+            ExcelObj.Worksheet ExcelWorkSheet;
+            ExcelWorkBook = ExcelApp.Workbooks.Add(Missing.Value);
+            ExcelWorkSheet = ExcelWorkBook.Worksheets.get_Item(1) as ExcelObj.Worksheet;
+
+            for (int i = 0; i < dataGrid.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGrid.ColumnCount; j++)
+                {
+                    ExcelApp.Cells[i + 1, j + 1] = dataGrid.Rows[i].Cells[j].Value;
+                }
+            }
+            ExcelApp.Visible = true;
+            ExcelApp.UserControl = true;
         }
         private void пользователиBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -93,6 +113,19 @@ namespace pfr
         {
             tabControl2.Hide();
             tabControl1.Show();
+        }
+
+        private void excel_exoprt_users_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                exportData(пользователиDataGridView);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return;
+            }
         }
     }
 }
