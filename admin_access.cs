@@ -39,5 +39,10 @@ namespace pfr
             general g = new general();
             g.Show();
         }
+
+        private void admin_access_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

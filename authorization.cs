@@ -55,5 +55,10 @@ namespace pfr
         {
             Application.Exit();
         }
+
+        private void authorization_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

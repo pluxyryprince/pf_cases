@@ -169,6 +169,7 @@ namespace pfr
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.authorization_FormClosing);
+            this.Load += new System.EventHandler(this.authorization_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
